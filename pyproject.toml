@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gc"
-version = "0.1.1"
+version = "0.1.2"
 description = "Python package for garbage collection utilities and memory management"
 readme = "README.md"
-license = {text = "Apache-2.0"}
+license = "Apache-2.0"
 authors = [
     {name = "Tom Sapletta", email = "tom@example.com"},
     "Tom Sapletta <tom@sapletta.com>",

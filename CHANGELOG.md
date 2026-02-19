@@ -1,3 +1,23 @@
+## [0.1.2] - 2026-02-19
+
+### Summary
+
+feat(docs): code quality metrics with 4 supporting modules
+
+### Docs
+
+- docs: update README
+- docs: update TODO.md
+
+### Build
+
+- update pyproject.toml
+
+### Other
+
+- build: update Makefile
+
+
 ## [0.1.1] - 2026-02-19
 
 ### Summary

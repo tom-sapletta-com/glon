@@ -7,7 +7,7 @@ import gc
 import tempfile
 import os
 from unittest.mock import patch, MagicMock
-from gc_toolkit.utils import (
+from klo.utils import (
     cleanup_temp_files,
     monitor_memory_usage,
     force_garbage_collection,
@@ -66,7 +66,7 @@ class TestCleanupTempFiles:
 class TestMonitorMemoryUsage:
     """Test cases for monitor_memory_usage function."""
     
-    @patch('gc_toolkit.utils.psutil')
+    @patch('klo.utils.psutil')
     def test_monitor_memory_usage(self, mock_psutil):
         """Test memory usage monitoring."""
         # Mock psutil.Process
@@ -172,7 +172,7 @@ class TestGetObjectSize:
 class TestAnalyzeMemoryUsage:
     """Test cases for analyze_memory_usage function."""
     
-    @patch('gc_toolkit.utils.psutil')
+    @patch('klo.utils.psutil')
     def test_analyze_memory_usage(self, mock_psutil):
         """Test memory usage analysis."""
         # Mock psutil.Process

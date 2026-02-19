@@ -132,8 +132,16 @@ class MemoryProfiler:
             Tracking ID
         """
         obj_id = str(id(obj))
+        try:
+            ref = weakref.ref(obj)
+            ref_type = 'weak'
+        except TypeError:
+            ref = obj
+            ref_type = 'strong'
+
         self.weak_refs[obj_id] = {
-            'weak_ref': weakref.ref(obj),
+            'ref': ref,
+            'ref_type': ref_type,
             'label': label,
             'type': type(obj).__name__,
             'created': time.time()
@@ -144,7 +152,10 @@ class MemoryProfiler:
         """Get information about tracked objects."""
         alive = {}
         for obj_id, info in self.weak_refs.items():
-            obj = info['weak_ref']()
+            if info.get('ref_type') == 'weak':
+                obj = info['ref']()
+            else:
+                obj = info.get('ref')
             if obj is not None:
                 alive[obj_id] = {
                     'label': info['label'],

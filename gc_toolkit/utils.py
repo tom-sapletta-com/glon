@@ -7,8 +7,14 @@ import os
 import tempfile
 import shutil
 import time
+import sys
 from typing import List, Dict, Any, Optional, Callable
 import logging
+
+try:
+    import psutil
+except ImportError:  # pragma: no cover
+    psutil = None
 
 
 def cleanup_temp_files(pattern: str = "*") -> int:
@@ -52,12 +58,10 @@ def monitor_memory_usage(duration: int = 60, interval: float = 1.0) -> List[Dict
     Returns:
         List of memory usage samples
     """
-    try:
-        import psutil
-    except ImportError:
+    if psutil is None or sys.modules.get('psutil') is None:
         raise ImportError("psutil is required for memory monitoring. Install with: pip install psutil")
     
-    process = psutil.Process(os.getpid())
+    process = psutil.Process(psutil.os.getpid())
     samples = []
     start_time = time.time()
     
@@ -177,12 +181,10 @@ def analyze_memory_usage() -> Dict[str, Any]:
     Returns:
         Dictionary with memory analysis
     """
-    try:
-        import psutil
-    except ImportError:
+    if psutil is None or sys.modules.get('psutil') is None:
         raise ImportError("psutil is required for memory analysis. Install with: pip install psutil")
     
-    process = psutil.Process(os.getpid())
+    process = psutil.Process(psutil.os.getpid())
     memory_info = process.memory_info()
     
     # Analyze object types

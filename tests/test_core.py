@@ -5,7 +5,7 @@ Tests for core garbage collection functionality.
 import pytest
 import gc
 import time
-from gc.core import GarbageCollector, MemoryProfiler
+from gc_toolkit.core import GarbageCollector, MemoryProfiler
 
 
 class TestGarbageCollector:
@@ -123,22 +123,28 @@ class TestMemoryProfiler:
     
     def test_track_object(self):
         """Test object tracking."""
-        test_obj = [1, 2, 3]
-        tracking_id = self.profiler.track_object(test_obj, "test_list")
+        class TestObject:
+            pass
+        
+        test_obj = TestObject()  # Use custom class for weak reference
+        tracking_id = self.profiler.track_object(test_obj, "test_object")
         
         assert tracking_id in self.profiler.weak_refs
-        assert self.profiler.weak_refs[tracking_id]['label'] == "test_list"
-        assert self.profiler.weak_refs[tracking_id]['type'] == "list"
+        assert self.profiler.weak_refs[tracking_id]['label'] == "test_object"
+        assert self.profiler.weak_refs[tracking_id]['type'] == "TestObject"
     
     def test_get_tracked_objects(self):
         """Test getting tracked objects information."""
-        test_obj = [1, 2, 3]
-        tracking_id = self.profiler.track_object(test_obj, "test_list")
+        class TestObject:
+            pass
+        
+        test_obj = TestObject()  # Use custom class for weak reference
+        tracking_id = self.profiler.track_object(test_obj, "test_object")
         
         tracked = self.profiler.get_tracked_objects()
         assert tracking_id in tracked
         assert tracked[tracking_id]['alive'] is True
-        assert tracked[tracking_id]['label'] == "test_list"
+        assert tracked[tracking_id]['label'] == "test_object"
         
         # Delete object and check it's marked as not alive
         del test_obj
@@ -180,7 +186,10 @@ class TestMemoryProfiler:
     
     def test_clear_tracking(self):
         """Test clearing tracked objects."""
-        test_obj = [1, 2, 3]
+        class TestObject:
+            pass
+        
+        test_obj = TestObject()  # Use custom class for weak reference
         self.profiler.track_object(test_obj, "test")
         assert len(self.profiler.weak_refs) == 1
         

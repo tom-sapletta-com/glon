@@ -1,11 +1,11 @@
 """
-gc - Python package for garbage collection utilities and memory management.
+gc_toolkit - Python package for garbage collection utilities and memory management.
 
 This package provides tools and utilities for working with Python's garbage collector,
 memory profiling, and cleanup operations.
 """
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"
 __author__ = "Tom Sapletta"
 __email__ = "tom@example.com"
 

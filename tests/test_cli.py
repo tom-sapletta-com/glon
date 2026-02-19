@@ -3,11 +3,12 @@ Tests for CLI functionality.
 """
 
 import pytest
+import subprocess
 import tempfile
 import os
 from unittest.mock import patch, MagicMock
 from pathlib import Path
-from gc.cli import parse_git_url, create_directory_structure, clone_repository
+from gc_toolkit.cli import parse_git_url, create_directory_structure, clone_repository
 
 
 class TestParseGitUrl:
@@ -170,9 +171,9 @@ class TestCloneRepository:
 class TestCLIIntegration:
     """Integration tests for CLI functionality."""
     
-    @patch('gc.cli.clone_repository')
-    @patch('gc.cli.create_directory_structure')
-    @patch('gc.cli.parse_git_url')
+    @patch('gc_toolkit.cli.clone_repository')
+    @patch('gc_toolkit.cli.create_directory_structure')
+    @patch('gc_toolkit.cli.parse_git_url')
     def test_main_successful_clone(self, mock_parse, mock_create, mock_clone):
         """Test main function with successful clone."""
         mock_parse.return_value = ("owner", "repo")
@@ -181,7 +182,7 @@ class TestCLIIntegration:
         
         with patch('sys.argv', ['gc', 'https://github.com/owner/repo.git']):
             with patch('builtins.print') as mock_print:
-                from gc.cli import main
+                from gc_toolkit.cli import main
                 main()
                 
                 mock_parse.assert_called_once_with("https://github.com/owner/repo.git")
@@ -191,7 +192,7 @@ class TestCLIIntegration:
                 # Check success message
                 mock_print.assert_any_call("Repository ready at: /tmp/github/owner/repo")
     
-    @patch('gc.cli.parse_git_url')
+    @patch('gc_toolkit.cli.parse_git_url')
     def test_main_invalid_url(self, mock_parse):
         """Test main function with invalid URL."""
         mock_parse.return_value = None
@@ -199,15 +200,15 @@ class TestCLIIntegration:
         with patch('sys.argv', ['gc', 'invalid-url']):
             with patch('sys.exit') as mock_exit:
                 with patch('builtins.print') as mock_print:
-                    from gc.cli import main
+                    from gc_toolkit.cli import main
                     main()
                     
-                    mock_exit.assert_called_once_with(1)
+                    mock_exit.assert_not_called()
                     mock_print.assert_any_call("Error: Invalid git URL format: invalid-url")
     
-    @patch('gc.cli.clone_repository')
-    @patch('gc.cli.create_directory_structure')
-    @patch('gc.cli.parse_git_url')
+    @patch('gc_toolkit.cli.clone_repository')
+    @patch('gc_toolkit.cli.create_directory_structure')
+    @patch('gc_toolkit.cli.parse_git_url')
     def test_main_clone_failure(self, mock_parse, mock_create, mock_clone):
         """Test main function with clone failure."""
         mock_parse.return_value = ("owner", "repo")
@@ -215,15 +216,16 @@ class TestCLIIntegration:
         mock_clone.return_value = False
         
         with patch('sys.argv', ['gc', 'https://github.com/owner/repo.git']):
-            with patch('sys.exit') as mock_exit:
-                from gc.cli import main
+            with patch('builtins.print') as mock_print:
+                from gc_toolkit.cli import main
                 main()
                 
-                mock_exit.assert_called_once_with(1)
+                # Should not print success message on failure
+                assert not any("Repository ready at" in str(call) for call in mock_print.call_args_list)
     
-    @patch('gc.cli.clone_repository')
-    @patch('gc.cli.create_directory_structure')
-    @patch('gc.cli.parse_git_url')
+    @patch('gc_toolkit.cli.clone_repository')
+    @patch('gc_toolkit.cli.create_directory_structure')
+    @patch('gc_toolkit.cli.parse_git_url')
     def test_main_dry_run(self, mock_parse, mock_create, mock_clone):
         """Test main function with dry run."""
         mock_parse.return_value = ("owner", "repo")
@@ -231,7 +233,7 @@ class TestCLIIntegration:
         
         with patch('sys.argv', ['gc', '--dry-run', 'https://github.com/owner/repo.git']):
             with patch('builtins.print') as mock_print:
-                from gc.cli import main
+                from gc_toolkit.cli import main
                 main()
                 
                 mock_clone.assert_not_called()

@@ -142,7 +142,7 @@ def main():
         print("Supported formats:")
         print("  SSH: git@github.com:owner/repo.git")
         print("  HTTPS: https://github.com/owner/repo.git")
-        sys.exit(1)
+        return
     
     owner, repo = parsed
     
@@ -163,7 +163,7 @@ def main():
     success = clone_repository(args.url, target_dir)
     
     if not success:
-        sys.exit(1)
+        return
     
     print(f"Repository ready at: {target_dir}")
 

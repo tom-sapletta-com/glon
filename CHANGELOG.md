@@ -1,3 +1,31 @@
+## [0.1.6] - 2026-02-19
+
+### Summary
+
+refactor(goal): CLI interface improvements
+
+### Test
+
+- update tests/test_cli.py
+- update tests/test_core.py
+- update tests/test_utils.py
+
+### Build
+
+- update pyproject.toml
+
+### Config
+
+- config: update goal.yaml
+
+### Other
+
+- update gc_toolkit/__init__.py
+- update gc_toolkit/cli.py
+- update gc_toolkit/core.py
+- update gc_toolkit/utils.py
+
+
 ## [0.1.5] - 2026-02-19
 
 ### Summary

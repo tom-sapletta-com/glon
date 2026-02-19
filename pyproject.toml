@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gc"
-version = "0.1.3"
+version = "0.1.4"
 description = "Python package for garbage collection utilities and memory management"
 readme = "README.md"
 license = "Apache-2.0"
 authors = [
     {name = "Tom Sapletta", email = "tom@example.com"},
-    "Tom Sapletta <tom@sapletta.com>",
+    {name = "Tom Sapletta", email = "tom@sapletta.com"},
 ]
 maintainers = [
     {name = "Tom Sapletta", email = "tom@example.com"}
@@ -47,6 +47,9 @@ test = [
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0"
 ]
+
+[project.scripts]
+gc = "gc.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/tom-sapletta/gc"

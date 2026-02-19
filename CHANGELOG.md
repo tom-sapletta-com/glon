@@ -1,3 +1,22 @@
+## [0.1.4] - 2026-02-19
+
+### Summary
+
+refactor(goal): CLI interface improvements
+
+### Test
+
+- update tests/test_cli.py
+
+### Build
+
+- update pyproject.toml
+
+### Other
+
+- update gc/cli.py
+
+
 ## [0.1.3] - 2026-02-19
 
 ### Summary

@@ -652,6 +652,39 @@ def main():
         # Get the project name (first non-flag argument)
         project_name = open_args[0]
         
+        # Check if it's a full path (absolute path provided directly)
+        if os.path.isabs(project_name) or Path(project_name).exists():
+            # It's a full path, use it directly
+            full_path = Path(project_name).resolve()
+            if full_path.exists() and full_path.is_dir():
+                # Parse IDE arguments
+                parser = argparse.ArgumentParser(
+                    description="Open project in IDE",
+                    prog="glon open"
+                )
+                parser.add_argument(
+                    "--ide",
+                    default="pycharm",
+                    choices=["pycharm", "idea", "vscode", "code", "webstorm", "goland", "rider"],
+                    help="IDE to use"
+                )
+                # Parse IDE arguments - include --ide and its value
+                ide_args = []
+                skip_next = False
+                for i, arg in enumerate(open_args):
+                    if skip_next:
+                        skip_next = False
+                        continue
+                    if arg.startswith("--"):
+                        ide_args.append(arg)
+                        # Check if next arg is a value (not a flag)
+                        if i + 1 < len(open_args) and not open_args[i + 1].startswith("-"):
+                            ide_args.append(open_args[i + 1])
+                            skip_next = True
+                args = parser.parse_args(ide_args)
+                open_in_ide(str(full_path), args.ide)
+                return
+        
         # Get all projects with their modification times
         all_projects_with_time = get_all_projects_with_time()
         

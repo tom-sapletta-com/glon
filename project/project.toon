@@ -1,0 +1,46 @@
+# glon | 41 func | 3f | 2244L | 2026-03-05
+
+HEALTH:
+  CC̄=5.3  critical=3 (limit:10)  dup=0  cycles=0
+
+ALERTS[11]:
+  !!! cc_exceeded      main = 68 (limit:15)
+  !!! high_fan_out     main = 41 (limit:10)
+  !!  cc_exceeded      list_projects = 23 (limit:15)
+  !!  cc_exceeded      grab_from_clipboard = 20 (limit:15)
+  !!  high_fan_out     list_projects = 19 (limit:10)
+  !!  high_fan_out     grab_from_clipboard = 18 (limit:10)
+  !!  high_fan_out     analyze_memory_usage = 16 (limit:10)
+  !   high_fan_out     open_in_ide = 14 (limit:10)
+  !   high_fan_out     monitor_memory_usage = 11 (limit:10)
+  !   high_fan_out     get_all_projects_with_time = 11 (limit:10)
+
+MODULES[4] (top by CC):
+  M[glon/cli.py] 969L C:0 M:13 CC↑68 D:0
+  M[glon/utils.py] 262L C:0 M:9 CC↑7 D:0
+  M[glon/core.py] 218L C:2 M:19 CC↑4 D:0
+
+HOTSPOTS[8]:
+  ★ main fan=41  // Main CLI entry point.
+  ★ list_projects fan=19  // List all projects in the base path.
+
+Args:
+    base_path: Base path to search (d
+  ★ grab_from_clipboard fan=18  // Grab path from clipboard and process it.
+
+Reads from clipboard and determines if
+  ★ analyze_memory_usage fan=16  // Analysis pipeline, 16 stages
+  ★ open_in_ide fan=14  // Open a project in an IDE.
+
+Args:
+    project_path: Path to project (e.g., "owner
+
+REFACTOR[7]:
+  [1] H/L Split main (CC=68 → target CC<10)
+  [2] H/H Split god module glon/cli.py (969L, 0 classes)
+  [3] M/L Split grab_from_clipboard (CC=20 → target CC<10)
+  [4] M/L Split list_projects (CC=23 → target CC<10)
+  [5] M/M Reduce main fan-out (currently 41)
+
+EVOLUTION:
+  2026-03-05 CC̄=5.3 crit=3 2244L // Automated analysis

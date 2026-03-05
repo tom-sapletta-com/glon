@@ -8,24 +8,24 @@ PIPELINES[3] (Core:1, Unknown:2):
               PURITY: 2/3 pure  BOTTLENECK: collect(CC=1)
 
   Glon [Unknown]: ? → Optional[tuple]
-              → main()                                  CC=68   IO  !! ▶
+              → main()                                  CC=79   IO  !! ▶
               → _extract_git_url_from_text(text:str) → Optional[str] CC=6    pure
               → parse_git_url(url:str) → Optional[tuple] CC=4    pure ■
-              PURITY: 2/3 pure  BOTTLENECK: main(CC=68)
+              PURITY: 2/3 pure  BOTTLENECK: main(CC=79)
 
   Glon [Unknown]: ? → List[dict]
-              → main()                                  CC=68   IO  !! ▶
+              → main()                                  CC=79   IO  !! ▶
               → get_all_projects(base_path:Optional[str]) → List[str] CC=2    pure
               → get_all_projects_with_time(base_path:Optional[str]) → List[dict] CC=8    mutation ■
-              PURITY: 1/3 pure  BOTTLENECK: main(CC=68)
+              PURITY: 1/3 pure  BOTTLENECK: main(CC=79)
 
 
 TRANSFORMS (fan-out ≥10):
   main()                                                  fan=41   !! script-in-disguise
   list_projects(base_path:Optional[str], time_filter:Optional[str], verbose:bool, limit:Optional[int]) → bool fan=19   fan=19
+  open_in_ide(project_path:str, ide:Optional[str]) → bool fan=19   fan=19
   grab_from_clipboard(base_path:Optional[str], dry_run:bool, verbose:bool) → bool fan=18   fan=18
   analyze_memory_usage() → Dict[str, Any]                 fan=16   fan=16
-  open_in_ide(project_path:str, ide:str) → bool           fan=14   fan=14
   monitor_memory_usage(duration:int, interval:float) → List[Dict[str, Any]] fan=11   fan=11
   get_all_projects_with_time(base_path:Optional[str]) → List[dict] fan=11   fan=11
   find_object_cycles(obj:Any, max_depth:int) → List[List[Any]] fan=10   fan=10
@@ -50,7 +50,7 @@ CONTRACTS:
       IN:  ()
       OUT: None
       SIDE-EFFECT: IO(print, print, print)
-      SMELL: CC=68 → split
+      SMELL: CC=79 → split
 
     _extract_git_url_from_text(text:str) → Optional[str]
       IN:  text:str
@@ -65,7 +65,7 @@ CONTRACTS:
       IN:  ()
       OUT: None
       SIDE-EFFECT: IO(print, print, print)
-      SMELL: CC=68 → split
+      SMELL: CC=79 → split
 
     get_all_projects(base_path:Optional[str]) → List[str]
       IN:  base_path:Optional[str]
@@ -85,10 +85,10 @@ DATA_TYPES (by cross-function usage) [38 annotated, 0 inferred / 41 functions]:
   tuple                consumed:1   produced:2    narrow scope
   Path                 consumed:1   produced:1    narrow scope
   str, int             consumed:0   produced:2    narrow scope
-  datetime             consumed:0   produced:1    narrow scope
-  List[Any]            consumed:0   produced:1    narrow scope
-  dict                 consumed:0   produced:1    narrow scope
   float                consumed:1   produced:0    narrow scope
+  List[Any]            consumed:0   produced:1    narrow scope
+  datetime             consumed:0   produced:1    narrow scope
+  dict                 consumed:0   produced:1    narrow scope
   logging.Logger       consumed:0   produced:1    narrow scope
 
   HUB TYPES (consumed ≥10):

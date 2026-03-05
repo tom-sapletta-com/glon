@@ -11,8 +11,8 @@ flowchart TD
         glon__cli__grab_from_clipboard{{grab_from_clipboard CC=20}}
         glon__cli__parse_time_filter("parse_time_filter CC=8")
         glon__cli__list_projects{{list_projects CC=23}}
-        glon__cli__open_in_ide("open_in_ide CC=9")
-        glon__cli__main{{main CC=68}}
+        glon__cli__open_in_ide{{open_in_ide CC=15}}
+        glon__cli__main{{main CC=79}}
     end
     subgraph glon_core
         glon__core__GarbageCollector____init__["__init__"]
@@ -63,5 +63,5 @@ flowchart TD
 
     classDef highCC fill:#ff6b6b,stroke:#c92a2a,color:#fff
     classDef medCC fill:#ffd43b,stroke:#f08c00,color:#000
-    class glon__cli__grab_from_clipboard,glon__cli__list_projects,glon__cli__main highCC
-    class glon__cli__get_all_projects_with_time,glon__cli__parse_time_filter,glon__cli__open_in_ide medCC
+    class glon__cli__grab_from_clipboard,glon__cli__list_projects,glon__cli__open_in_ide,glon__cli__main highCC
+    class glon__cli__get_all_projects_with_time,glon__cli__parse_time_filter medCC

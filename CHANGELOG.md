@@ -1,5 +1,23 @@
 ## [Unreleased]
 
+## [0.1.25] - 2026-03-05
+
+### Docs
+- Update project/context.md
+
+### Other
+- Update glon/cli.py
+- Update project/analysis.json
+- Update project/analysis.toon
+- Update project/analysis.yaml
+- Update project/calls.mmd
+- Update project/calls.png
+- Update project/dashboard.html
+- Update project/evolution.toon
+- Update project/flow.mmd
+- Update project/flow.png
+- ... and 4 more files
+
 ## [0.1.24] - 2026-03-05
 
 ### Docs

@@ -301,10 +301,10 @@ Args:
 
 Functions exposed as public API (no underscore prefix):
 
-- `glon.cli.main` - 113 calls
+- `glon.cli.main` - 134 calls
+- `glon.cli.open_in_ide` - 46 calls
 - `glon.cli.grab_from_clipboard` - 37 calls
 - `glon.cli.list_projects` - 33 calls
-- `glon.cli.open_in_ide` - 30 calls
 - `glon.utils.analyze_memory_usage` - 16 calls
 - `glon.utils.monitor_memory_usage` - 13 calls
 - `glon.core.MemoryProfiler.take_snapshot` - 12 calls

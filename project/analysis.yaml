@@ -4,10 +4,10 @@ stats:
   files_processed: 4
   functions_found: 41
   classes_found: 2
-  nodes_created: 342
-  edges_created: 431
+  nodes_created: 350
+  edges_created: 445
   patterns_detected: 0
-  analysis_time_seconds: 0.39
+  analysis_time_seconds: 0.38
   cache_hits: 0
 nodes:
   glon.utils.cleanup_temp_files_entry:
@@ -1489,14 +1489,31 @@ nodes:
     label: if
     function: glon.cli.open_in_ide
     line: 562
-  glon.cli.open_in_ide_return_565:
-    id: glon.cli.open_in_ide_return_565
+  glon.cli.open_in_ide_loop_566:
+    id: glon.cli.open_in_ide_loop_566
+    type: FOR
+    label: for
+    function: glon.cli.open_in_ide
+    line: 566
+  glon.cli.open_in_ide_merge_562:
+    id: glon.cli.open_in_ide_merge_562
+    type: FUNC
+    label: merge
+    function: glon.cli.open_in_ide
+  glon.cli.open_in_ide_if_590:
+    id: glon.cli.open_in_ide_if_590
+    type: IF
+    label: if
+    function: glon.cli.open_in_ide
+    line: 590
+  glon.cli.open_in_ide_return_593:
+    id: glon.cli.open_in_ide_return_593
     type: RETURN
     label: return
     function: glon.cli.open_in_ide
-    line: 565
-  glon.cli.open_in_ide_merge_562:
-    id: glon.cli.open_in_ide_merge_562
+    line: 593
+  glon.cli.open_in_ide_merge_590:
+    id: glon.cli.open_in_ide_merge_590
     type: FUNC
     label: merge
     function: glon.cli.open_in_ide
@@ -1510,194 +1527,150 @@ nodes:
     type: EXIT
     label: exit
     function: glon.cli.main
-  glon.cli.main_if_582:
-    id: glon.cli.main_if_582
+  glon.cli.main_if_610:
+    id: glon.cli.main_if_610
     type: IF
     label: if
     function: glon.cli.main
-    line: 582
-  glon.cli.main_if_590:
-    id: glon.cli.main_if_590
+    line: 610
+  glon.cli.main_if_618:
+    id: glon.cli.main_if_618
     type: IF
     label: if
     function: glon.cli.main
-    line: 590
-  glon.cli.main_if_593:
-    id: glon.cli.main_if_593
+    line: 618
+  glon.cli.main_if_621:
+    id: glon.cli.main_if_621
     type: IF
     label: if
     function: glon.cli.main
-    line: 593
-  glon.cli.main_if_596:
-    id: glon.cli.main_if_596
+    line: 621
+  glon.cli.main_if_624:
+    id: glon.cli.main_if_624
     type: IF
     label: if
     function: glon.cli.main
-    line: 596
-  glon.cli.main_if_598:
-    id: glon.cli.main_if_598
+    line: 624
+  glon.cli.main_if_626:
+    id: glon.cli.main_if_626
     type: IF
     label: if
     function: glon.cli.main
-    line: 598
-  glon.cli.main_merge_598:
-    id: glon.cli.main_merge_598
+    line: 626
+  glon.cli.main_merge_626:
+    id: glon.cli.main_merge_626
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_merge_596:
-    id: glon.cli.main_merge_596
+  glon.cli.main_merge_624:
+    id: glon.cli.main_merge_624
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_merge_593:
-    id: glon.cli.main_merge_593
+  glon.cli.main_merge_621:
+    id: glon.cli.main_merge_621
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_loop_646:
-    id: glon.cli.main_loop_646
-    type: FOR
-    label: for
-    function: glon.cli.main
-    line: 646
-  glon.cli.main_return_650:
-    id: glon.cli.main_return_650
-    type: RETURN
-    label: return
-    function: glon.cli.main
-    line: 650
-  glon.cli.main_merge_590:
-    id: glon.cli.main_merge_590
-    type: FUNC
-    label: merge
-    function: glon.cli.main
-  glon.cli.main_if_656:
-    id: glon.cli.main_if_656
+  glon.cli.main_if_674:
+    id: glon.cli.main_if_674
     type: IF
     label: if
-    function: glon.cli.main
-    line: 656
-  glon.cli.main_if_659:
-    id: glon.cli.main_if_659
-    type: IF
-    label: if
-    function: glon.cli.main
-    line: 659
-  glon.cli.main_loop_674:
-    id: glon.cli.main_loop_674
-    type: FOR
-    label: for
     function: glon.cli.main
     line: 674
-  glon.cli.main_return_686:
-    id: glon.cli.main_return_686
+  glon.cli.main_return_676:
+    id: glon.cli.main_return_676
     type: RETURN
     label: return
+    function: glon.cli.main
+    line: 676
+  glon.cli.main_merge_674:
+    id: glon.cli.main_merge_674
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_loop_686:
+    id: glon.cli.main_loop_686
+    type: FOR
+    label: for
     function: glon.cli.main
     line: 686
-  glon.cli.main_merge_659:
-    id: glon.cli.main_merge_659
-    type: FUNC
-    label: merge
-    function: glon.cli.main
-  glon.cli.main_merge_656:
-    id: glon.cli.main_merge_656
-    type: FUNC
-    label: merge
-    function: glon.cli.main
-  glon.cli.main_if_697:
-    id: glon.cli.main_if_697
+  glon.cli.main_if_689:
+    id: glon.cli.main_if_689
     type: IF
     label: if
     function: glon.cli.main
-    line: 697
-  glon.cli.main_loop_700:
-    id: glon.cli.main_loop_700
-    type: FOR
-    label: for
+    line: 689
+  glon.cli.main_merge_689:
+    id: glon.cli.main_merge_689
+    type: FUNC
+    label: merge
     function: glon.cli.main
-    line: 700
-  glon.cli.main_return_702:
-    id: glon.cli.main_return_702
+  glon.cli.main_return_736:
+    id: glon.cli.main_return_736
     type: RETURN
     label: return
     function: glon.cli.main
-    line: 702
-  glon.cli.main_merge_697:
-    id: glon.cli.main_merge_697
+    line: 736
+  glon.cli.main_merge_618:
+    id: glon.cli.main_merge_618
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_if_708:
-    id: glon.cli.main_if_708
+  glon.cli.main_if_742:
+    id: glon.cli.main_if_742
     type: IF
     label: if
     function: glon.cli.main
-    line: 708
-  glon.cli.main_if_720:
-    id: glon.cli.main_if_720
+    line: 742
+  glon.cli.main_if_745:
+    id: glon.cli.main_if_745
     type: IF
     label: if
     function: glon.cli.main
-    line: 720
-  glon.cli.main_if_725:
-    id: glon.cli.main_if_725
-    type: IF
-    label: if
-    function: glon.cli.main
-    line: 725
-  glon.cli.main_loop_729:
-    id: glon.cli.main_loop_729
+    line: 745
+  glon.cli.main_loop_760:
+    id: glon.cli.main_loop_760
     type: FOR
     label: for
     function: glon.cli.main
-    line: 729
-  glon.cli.main_merge_725:
-    id: glon.cli.main_merge_725
-    type: FUNC
-    label: merge
-    function: glon.cli.main
-  glon.cli.main_merge_720:
-    id: glon.cli.main_merge_720
-    type: FUNC
-    label: merge
-    function: glon.cli.main
-  glon.cli.main_merge_708:
-    id: glon.cli.main_merge_708
-    type: FUNC
-    label: merge
-    function: glon.cli.main
-  glon.cli.main_if_774:
-    id: glon.cli.main_if_774
-    type: IF
-    label: if
-    function: glon.cli.main
-    line: 774
-  glon.cli.main_merge_774:
-    id: glon.cli.main_merge_774
-    type: FUNC
-    label: merge
-    function: glon.cli.main
-  glon.cli.main_if_785:
-    id: glon.cli.main_if_785
-    type: IF
-    label: if
-    function: glon.cli.main
-    line: 785
-  glon.cli.main_merge_785:
-    id: glon.cli.main_merge_785
-    type: FUNC
-    label: merge
-    function: glon.cli.main
-  glon.cli.main_return_791:
-    id: glon.cli.main_return_791
+    line: 760
+  glon.cli.main_return_772:
+    id: glon.cli.main_return_772
     type: RETURN
     label: return
     function: glon.cli.main
-    line: 791
-  glon.cli.main_merge_582:
-    id: glon.cli.main_merge_582
+    line: 772
+  glon.cli.main_merge_745:
+    id: glon.cli.main_merge_745
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_merge_742:
+    id: glon.cli.main_merge_742
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_if_783:
+    id: glon.cli.main_if_783
+    type: IF
+    label: if
+    function: glon.cli.main
+    line: 783
+  glon.cli.main_loop_786:
+    id: glon.cli.main_loop_786
+    type: FOR
+    label: for
+    function: glon.cli.main
+    line: 786
+  glon.cli.main_return_788:
+    id: glon.cli.main_return_788
+    type: RETURN
+    label: return
+    function: glon.cli.main
+    line: 788
+  glon.cli.main_merge_783:
+    id: glon.cli.main_merge_783
     type: FUNC
     label: merge
     function: glon.cli.main
@@ -1707,114 +1680,108 @@ nodes:
     label: if
     function: glon.cli.main
     line: 794
-  glon.cli.main_if_836:
-    id: glon.cli.main_if_836
+  glon.cli.main_if_806:
+    id: glon.cli.main_if_806
     type: IF
     label: if
     function: glon.cli.main
-    line: 836
-  glon.cli.main_if_838:
-    id: glon.cli.main_if_838
+    line: 806
+  glon.cli.main_if_811:
+    id: glon.cli.main_if_811
     type: IF
     label: if
     function: glon.cli.main
-    line: 838
-  glon.cli.main_merge_838:
-    id: glon.cli.main_merge_838
+    line: 811
+  glon.cli.main_loop_815:
+    id: glon.cli.main_loop_815
+    type: FOR
+    label: for
+    function: glon.cli.main
+    line: 815
+  glon.cli.main_merge_811:
+    id: glon.cli.main_merge_811
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_merge_836:
-    id: glon.cli.main_merge_836
+  glon.cli.main_merge_806:
+    id: glon.cli.main_merge_806
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_return_848:
-    id: glon.cli.main_return_848
-    type: RETURN
-    label: return
-    function: glon.cli.main
-    line: 848
   glon.cli.main_merge_794:
     id: glon.cli.main_merge_794
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_if_851:
-    id: glon.cli.main_if_851
+  glon.cli.main_if_860:
+    id: glon.cli.main_if_860
     type: IF
     label: if
     function: glon.cli.main
-    line: 851
-  glon.cli.main_return_882:
-    id: glon.cli.main_return_882
+    line: 860
+  glon.cli.main_merge_860:
+    id: glon.cli.main_merge_860
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_if_871:
+    id: glon.cli.main_if_871
+    type: IF
+    label: if
+    function: glon.cli.main
+    line: 871
+  glon.cli.main_merge_871:
+    id: glon.cli.main_merge_871
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_return_877:
+    id: glon.cli.main_return_877
     type: RETURN
     label: return
     function: glon.cli.main
-    line: 882
-  glon.cli.main_merge_851:
-    id: glon.cli.main_merge_851
+    line: 877
+  glon.cli.main_merge_610:
+    id: glon.cli.main_merge_610
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_if_921:
-    id: glon.cli.main_if_921
+  glon.cli.main_if_880:
+    id: glon.cli.main_if_880
     type: IF
     label: if
     function: glon.cli.main
-    line: 921
-  glon.cli.main_if_923:
-    id: glon.cli.main_if_923
+    line: 880
+  glon.cli.main_if_922:
+    id: glon.cli.main_if_922
     type: IF
     label: if
     function: glon.cli.main
-    line: 923
-  glon.cli.main_merge_923:
-    id: glon.cli.main_merge_923
+    line: 922
+  glon.cli.main_if_924:
+    id: glon.cli.main_if_924
+    type: IF
+    label: if
+    function: glon.cli.main
+    line: 924
+  glon.cli.main_merge_924:
+    id: glon.cli.main_merge_924
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_merge_921:
-    id: glon.cli.main_merge_921
+  glon.cli.main_merge_922:
+    id: glon.cli.main_merge_922
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_if_926:
-    id: glon.cli.main_if_926
-    type: IF
-    label: if
-    function: glon.cli.main
-    line: 926
-  glon.cli.main_if_928:
-    id: glon.cli.main_if_928
-    type: IF
-    label: if
-    function: glon.cli.main
-    line: 928
-  glon.cli.main_return_930:
-    id: glon.cli.main_return_930
+  glon.cli.main_return_934:
+    id: glon.cli.main_return_934
     type: RETURN
     label: return
     function: glon.cli.main
-    line: 930
-  glon.cli.main_merge_928:
-    id: glon.cli.main_merge_928
-    type: FUNC
-    label: merge
-    function: glon.cli.main
-  glon.cli.main_merge_926:
-    id: glon.cli.main_merge_926
-    type: FUNC
-    label: merge
-    function: glon.cli.main
-  glon.cli.main_if_933:
-    id: glon.cli.main_if_933
-    type: IF
-    label: if
-    function: glon.cli.main
-    line: 933
-  glon.cli.main_merge_933:
-    id: glon.cli.main_merge_933
+    line: 934
+  glon.cli.main_merge_880:
+    id: glon.cli.main_merge_880
     type: FUNC
     label: merge
     function: glon.cli.main
@@ -1824,70 +1791,148 @@ nodes:
     label: if
     function: glon.cli.main
     line: 937
-  glon.cli.main_return_942:
-    id: glon.cli.main_return_942
+  glon.cli.main_return_968:
+    id: glon.cli.main_return_968
     type: RETURN
     label: return
     function: glon.cli.main
-    line: 942
+    line: 968
   glon.cli.main_merge_937:
     id: glon.cli.main_merge_937
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_if_946:
-    id: glon.cli.main_if_946
+  glon.cli.main_if_1007:
+    id: glon.cli.main_if_1007
     type: IF
     label: if
     function: glon.cli.main
-    line: 946
-  glon.cli.main_merge_946:
-    id: glon.cli.main_merge_946
+    line: 1007
+  glon.cli.main_if_1009:
+    id: glon.cli.main_if_1009
+    type: IF
+    label: if
+    function: glon.cli.main
+    line: 1009
+  glon.cli.main_merge_1009:
+    id: glon.cli.main_merge_1009
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_if_952:
-    id: glon.cli.main_if_952
-    type: IF
-    label: if
-    function: glon.cli.main
-    line: 952
-  glon.cli.main_merge_952:
-    id: glon.cli.main_merge_952
+  glon.cli.main_merge_1007:
+    id: glon.cli.main_merge_1007
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_if_955:
-    id: glon.cli.main_if_955
+  glon.cli.main_if_1012:
+    id: glon.cli.main_if_1012
     type: IF
     label: if
     function: glon.cli.main
-    line: 955
-  glon.cli.main_return_957:
-    id: glon.cli.main_return_957
+    line: 1012
+  glon.cli.main_if_1014:
+    id: glon.cli.main_if_1014
+    type: IF
+    label: if
+    function: glon.cli.main
+    line: 1014
+  glon.cli.main_return_1016:
+    id: glon.cli.main_return_1016
     type: RETURN
     label: return
     function: glon.cli.main
-    line: 957
-  glon.cli.main_merge_955:
-    id: glon.cli.main_merge_955
+    line: 1016
+  glon.cli.main_merge_1014:
+    id: glon.cli.main_merge_1014
     type: FUNC
     label: merge
     function: glon.cli.main
-  glon.cli.main_if_962:
-    id: glon.cli.main_if_962
+  glon.cli.main_merge_1012:
+    id: glon.cli.main_merge_1012
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_if_1019:
+    id: glon.cli.main_if_1019
     type: IF
     label: if
     function: glon.cli.main
-    line: 962
-  glon.cli.main_return_963:
-    id: glon.cli.main_return_963
+    line: 1019
+  glon.cli.main_merge_1019:
+    id: glon.cli.main_merge_1019
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_if_1023:
+    id: glon.cli.main_if_1023
+    type: IF
+    label: if
+    function: glon.cli.main
+    line: 1023
+  glon.cli.main_return_1028:
+    id: glon.cli.main_return_1028
     type: RETURN
     label: return
     function: glon.cli.main
-    line: 963
-  glon.cli.main_merge_962:
-    id: glon.cli.main_merge_962
+    line: 1028
+  glon.cli.main_merge_1023:
+    id: glon.cli.main_merge_1023
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_if_1032:
+    id: glon.cli.main_if_1032
+    type: IF
+    label: if
+    function: glon.cli.main
+    line: 1032
+  glon.cli.main_merge_1032:
+    id: glon.cli.main_merge_1032
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_if_1038:
+    id: glon.cli.main_if_1038
+    type: IF
+    label: if
+    function: glon.cli.main
+    line: 1038
+  glon.cli.main_merge_1038:
+    id: glon.cli.main_merge_1038
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_if_1041:
+    id: glon.cli.main_if_1041
+    type: IF
+    label: if
+    function: glon.cli.main
+    line: 1041
+  glon.cli.main_return_1043:
+    id: glon.cli.main_return_1043
+    type: RETURN
+    label: return
+    function: glon.cli.main
+    line: 1043
+  glon.cli.main_merge_1041:
+    id: glon.cli.main_merge_1041
+    type: FUNC
+    label: merge
+    function: glon.cli.main
+  glon.cli.main_if_1048:
+    id: glon.cli.main_if_1048
+    type: IF
+    label: if
+    function: glon.cli.main
+    line: 1048
+  glon.cli.main_return_1049:
+    id: glon.cli.main_return_1049
+    type: RETURN
+    label: return
+    function: glon.cli.main
+    line: 1049
+  glon.cli.main_merge_1048:
+    id: glon.cli.main_merge_1048
     type: FUNC
     label: merge
     function: glon.cli.main
@@ -2856,333 +2901,375 @@ edges:
   target: glon.cli.open_in_ide_if_562
   edge_type: control
 - source: glon.cli.open_in_ide_if_562
-  target: glon.cli.open_in_ide_return_565
+  target: glon.cli.open_in_ide_loop_566
   edge_type: control
-- source: glon.cli.open_in_ide_return_565
+- source: glon.cli.open_in_ide_loop_566
   target: glon.cli.open_in_ide_exit
   edge_type: control
 - source: glon.cli.open_in_ide_exit
   target: glon.cli.open_in_ide_merge_562
   edge_type: control
 - source: glon.cli.open_in_ide_merge_562
+  target: glon.cli.open_in_ide_if_590
+  edge_type: control
+- source: glon.cli.open_in_ide_if_590
+  target: glon.cli.open_in_ide_return_593
+  edge_type: control
+- source: glon.cli.open_in_ide_return_593
+  target: glon.cli.open_in_ide_exit
+  edge_type: control
+- source: glon.cli.open_in_ide_exit
+  target: glon.cli.open_in_ide_merge_590
+  edge_type: control
+- source: glon.cli.open_in_ide_merge_590
   target: glon.cli.open_in_ide_exit
   edge_type: control
 - source: glon.cli.main_entry
-  target: glon.cli.main_if_582
+  target: glon.cli.main_if_610
   edge_type: control
-- source: glon.cli.main_if_582
-  target: glon.cli.main_if_590
+- source: glon.cli.main_if_610
+  target: glon.cli.main_if_618
   edge_type: control
-- source: glon.cli.main_if_590
-  target: glon.cli.main_if_593
+- source: glon.cli.main_if_618
+  target: glon.cli.main_if_621
   edge_type: control
-- source: glon.cli.main_if_593
-  target: glon.cli.main_if_596
+- source: glon.cli.main_if_621
+  target: glon.cli.main_if_624
   edge_type: control
-- source: glon.cli.main_if_596
-  target: glon.cli.main_if_598
+- source: glon.cli.main_if_624
+  target: glon.cli.main_if_626
   edge_type: control
-- source: glon.cli.main_if_598
+- source: glon.cli.main_if_626
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_598
+  target: glon.cli.main_merge_626
   edge_type: control
-- source: glon.cli.main_merge_598
+- source: glon.cli.main_merge_626
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_596
+  target: glon.cli.main_merge_624
   edge_type: control
-- source: glon.cli.main_merge_596
+- source: glon.cli.main_merge_624
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_593
+  target: glon.cli.main_merge_621
   edge_type: control
-- source: glon.cli.main_merge_593
-  target: glon.cli.main_loop_646
+- source: glon.cli.main_merge_621
+  target: glon.cli.main_if_674
   edge_type: control
-- source: glon.cli.main_loop_646
-  target: glon.cli.main_return_650
+- source: glon.cli.main_if_674
+  target: glon.cli.main_return_676
   edge_type: control
-- source: glon.cli.main_return_650
+- source: glon.cli.main_return_676
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_590
+  target: glon.cli.main_merge_674
   edge_type: control
-- source: glon.cli.main_merge_590
-  target: glon.cli.main_if_656
+- source: glon.cli.main_merge_674
+  target: glon.cli.main_loop_686
   edge_type: control
-- source: glon.cli.main_if_656
-  target: glon.cli.main_if_659
+- source: glon.cli.main_loop_686
+  target: glon.cli.main_if_689
   edge_type: control
-- source: glon.cli.main_if_659
-  target: glon.cli.main_loop_674
+- source: glon.cli.main_if_689
+  target: glon.cli.main_loop_686
   edge_type: control
-- source: glon.cli.main_loop_674
-  target: glon.cli.main_loop_674
+- source: glon.cli.main_if_689
+  target: glon.cli.main_loop_686
   edge_type: control
-- source: glon.cli.main_loop_674
-  target: glon.cli.main_return_686
+- source: glon.cli.main_loop_686
+  target: glon.cli.main_merge_689
   edge_type: control
-- source: glon.cli.main_return_686
+- source: glon.cli.main_loop_686
+  target: glon.cli.main_merge_689
+  edge_type: control
+- source: glon.cli.main_merge_689
+  target: glon.cli.main_loop_686
+  edge_type: control
+- source: glon.cli.main_loop_686
+  target: glon.cli.main_return_736
+  edge_type: control
+- source: glon.cli.main_return_736
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_659
+  target: glon.cli.main_merge_618
   edge_type: control
-- source: glon.cli.main_merge_659
+- source: glon.cli.main_merge_618
+  target: glon.cli.main_if_742
+  edge_type: control
+- source: glon.cli.main_if_742
+  target: glon.cli.main_if_745
+  edge_type: control
+- source: glon.cli.main_if_745
+  target: glon.cli.main_loop_760
+  edge_type: control
+- source: glon.cli.main_loop_760
+  target: glon.cli.main_loop_760
+  edge_type: control
+- source: glon.cli.main_loop_760
+  target: glon.cli.main_return_772
+  edge_type: control
+- source: glon.cli.main_return_772
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_656
+  target: glon.cli.main_merge_745
   edge_type: control
-- source: glon.cli.main_merge_656
-  target: glon.cli.main_if_697
-  edge_type: control
-- source: glon.cli.main_if_697
-  target: glon.cli.main_loop_700
-  edge_type: control
-- source: glon.cli.main_loop_700
-  target: glon.cli.main_return_702
-  edge_type: control
-- source: glon.cli.main_return_702
+- source: glon.cli.main_merge_745
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_697
+  target: glon.cli.main_merge_742
   edge_type: control
-- source: glon.cli.main_merge_697
-  target: glon.cli.main_if_708
+- source: glon.cli.main_merge_742
+  target: glon.cli.main_if_783
   edge_type: control
-- source: glon.cli.main_if_708
-  target: glon.cli.main_exit
+- source: glon.cli.main_if_783
+  target: glon.cli.main_loop_786
   edge_type: control
-- source: glon.cli.main_if_708
-  target: glon.cli.main_if_720
+- source: glon.cli.main_loop_786
+  target: glon.cli.main_return_788
   edge_type: control
-- source: glon.cli.main_if_720
-  target: glon.cli.main_exit
-  edge_type: control
-- source: glon.cli.main_if_720
-  target: glon.cli.main_if_725
-  edge_type: control
-- source: glon.cli.main_if_725
-  target: glon.cli.main_loop_729
-  edge_type: control
-- source: glon.cli.main_loop_729
-  target: glon.cli.main_loop_729
-  edge_type: control
-- source: glon.cli.main_loop_729
-  target: glon.cli.main_exit
-  edge_type: control
-- source: glon.cli.main_if_725
+- source: glon.cli.main_return_788
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_725
+  target: glon.cli.main_merge_783
   edge_type: control
-- source: glon.cli.main_exit
-  target: glon.cli.main_merge_725
-  edge_type: control
-- source: glon.cli.main_merge_725
-  target: glon.cli.main_exit
-  edge_type: control
-- source: glon.cli.main_exit
-  target: glon.cli.main_merge_720
-  edge_type: control
-- source: glon.cli.main_exit
-  target: glon.cli.main_merge_720
-  edge_type: control
-- source: glon.cli.main_merge_720
-  target: glon.cli.main_exit
-  edge_type: control
-- source: glon.cli.main_exit
-  target: glon.cli.main_merge_708
-  edge_type: control
-- source: glon.cli.main_exit
-  target: glon.cli.main_merge_708
-  edge_type: control
-- source: glon.cli.main_merge_708
-  target: glon.cli.main_if_774
-  edge_type: control
-- source: glon.cli.main_if_774
-  target: glon.cli.main_exit
-  edge_type: control
-- source: glon.cli.main_exit
-  target: glon.cli.main_merge_774
-  edge_type: control
-- source: glon.cli.main_merge_774
-  target: glon.cli.main_if_785
-  edge_type: control
-- source: glon.cli.main_if_785
-  target: glon.cli.main_exit
-  edge_type: control
-- source: glon.cli.main_exit
-  target: glon.cli.main_merge_785
-  edge_type: control
-- source: glon.cli.main_merge_785
-  target: glon.cli.main_return_791
-  edge_type: control
-- source: glon.cli.main_return_791
-  target: glon.cli.main_exit
-  edge_type: control
-- source: glon.cli.main_exit
-  target: glon.cli.main_merge_582
-  edge_type: control
-- source: glon.cli.main_merge_582
+- source: glon.cli.main_merge_783
   target: glon.cli.main_if_794
   edge_type: control
 - source: glon.cli.main_if_794
-  target: glon.cli.main_if_836
-  edge_type: control
-- source: glon.cli.main_if_836
   target: glon.cli.main_exit
   edge_type: control
-- source: glon.cli.main_if_836
-  target: glon.cli.main_if_838
+- source: glon.cli.main_if_794
+  target: glon.cli.main_if_806
   edge_type: control
-- source: glon.cli.main_if_838
+- source: glon.cli.main_if_806
+  target: glon.cli.main_exit
+  edge_type: control
+- source: glon.cli.main_if_806
+  target: glon.cli.main_if_811
+  edge_type: control
+- source: glon.cli.main_if_811
+  target: glon.cli.main_loop_815
+  edge_type: control
+- source: glon.cli.main_loop_815
+  target: glon.cli.main_loop_815
+  edge_type: control
+- source: glon.cli.main_loop_815
+  target: glon.cli.main_exit
+  edge_type: control
+- source: glon.cli.main_if_811
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_838
+  target: glon.cli.main_merge_811
   edge_type: control
-- source: glon.cli.main_merge_838
+- source: glon.cli.main_exit
+  target: glon.cli.main_merge_811
+  edge_type: control
+- source: glon.cli.main_merge_811
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_836
+  target: glon.cli.main_merge_806
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_836
+  target: glon.cli.main_merge_806
   edge_type: control
-- source: glon.cli.main_merge_836
-  target: glon.cli.main_return_848
-  edge_type: control
-- source: glon.cli.main_return_848
+- source: glon.cli.main_merge_806
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
   target: glon.cli.main_merge_794
   edge_type: control
+- source: glon.cli.main_exit
+  target: glon.cli.main_merge_794
+  edge_type: control
 - source: glon.cli.main_merge_794
-  target: glon.cli.main_if_851
+  target: glon.cli.main_if_860
   edge_type: control
-- source: glon.cli.main_if_851
-  target: glon.cli.main_return_882
-  edge_type: control
-- source: glon.cli.main_return_882
+- source: glon.cli.main_if_860
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_851
+  target: glon.cli.main_merge_860
   edge_type: control
-- source: glon.cli.main_merge_851
-  target: glon.cli.main_if_921
+- source: glon.cli.main_merge_860
+  target: glon.cli.main_if_871
   edge_type: control
-- source: glon.cli.main_if_921
-  target: glon.cli.main_if_923
-  edge_type: control
-- source: glon.cli.main_if_923
+- source: glon.cli.main_if_871
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_923
+  target: glon.cli.main_merge_871
   edge_type: control
-- source: glon.cli.main_merge_923
+- source: glon.cli.main_merge_871
+  target: glon.cli.main_return_877
+  edge_type: control
+- source: glon.cli.main_return_877
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_921
+  target: glon.cli.main_merge_610
   edge_type: control
-- source: glon.cli.main_merge_921
-  target: glon.cli.main_if_926
+- source: glon.cli.main_merge_610
+  target: glon.cli.main_if_880
   edge_type: control
-- source: glon.cli.main_if_926
-  target: glon.cli.main_if_928
+- source: glon.cli.main_if_880
+  target: glon.cli.main_if_922
   edge_type: control
-- source: glon.cli.main_if_928
-  target: glon.cli.main_return_930
+- source: glon.cli.main_if_922
+  target: glon.cli.main_exit
   edge_type: control
-- source: glon.cli.main_return_930
+- source: glon.cli.main_if_922
+  target: glon.cli.main_if_924
+  edge_type: control
+- source: glon.cli.main_if_924
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_928
+  target: glon.cli.main_merge_924
   edge_type: control
-- source: glon.cli.main_merge_928
+- source: glon.cli.main_merge_924
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_926
+  target: glon.cli.main_merge_922
   edge_type: control
-- source: glon.cli.main_merge_926
-  target: glon.cli.main_if_933
+- source: glon.cli.main_exit
+  target: glon.cli.main_merge_922
   edge_type: control
-- source: glon.cli.main_if_933
+- source: glon.cli.main_merge_922
+  target: glon.cli.main_return_934
+  edge_type: control
+- source: glon.cli.main_return_934
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_933
+  target: glon.cli.main_merge_880
   edge_type: control
-- source: glon.cli.main_merge_933
+- source: glon.cli.main_merge_880
   target: glon.cli.main_if_937
   edge_type: control
 - source: glon.cli.main_if_937
-  target: glon.cli.main_return_942
+  target: glon.cli.main_return_968
   edge_type: control
-- source: glon.cli.main_return_942
+- source: glon.cli.main_return_968
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
   target: glon.cli.main_merge_937
   edge_type: control
 - source: glon.cli.main_merge_937
-  target: glon.cli.main_if_946
+  target: glon.cli.main_if_1007
   edge_type: control
-- source: glon.cli.main_if_946
+- source: glon.cli.main_if_1007
+  target: glon.cli.main_if_1009
+  edge_type: control
+- source: glon.cli.main_if_1009
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_946
+  target: glon.cli.main_merge_1009
   edge_type: control
-- source: glon.cli.main_merge_946
-  target: glon.cli.main_if_952
-  edge_type: control
-- source: glon.cli.main_if_952
+- source: glon.cli.main_merge_1009
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_952
+  target: glon.cli.main_merge_1007
   edge_type: control
-- source: glon.cli.main_merge_952
-  target: glon.cli.main_if_955
+- source: glon.cli.main_merge_1007
+  target: glon.cli.main_if_1012
   edge_type: control
-- source: glon.cli.main_if_955
-  target: glon.cli.main_return_957
+- source: glon.cli.main_if_1012
+  target: glon.cli.main_if_1014
   edge_type: control
-- source: glon.cli.main_return_957
+- source: glon.cli.main_if_1014
+  target: glon.cli.main_return_1016
+  edge_type: control
+- source: glon.cli.main_return_1016
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_955
+  target: glon.cli.main_merge_1014
   edge_type: control
-- source: glon.cli.main_merge_955
-  target: glon.cli.main_if_962
-  edge_type: control
-- source: glon.cli.main_if_962
-  target: glon.cli.main_return_963
-  edge_type: control
-- source: glon.cli.main_return_963
+- source: glon.cli.main_merge_1014
   target: glon.cli.main_exit
   edge_type: control
 - source: glon.cli.main_exit
-  target: glon.cli.main_merge_962
+  target: glon.cli.main_merge_1012
   edge_type: control
-- source: glon.cli.main_merge_962
+- source: glon.cli.main_merge_1012
+  target: glon.cli.main_if_1019
+  edge_type: control
+- source: glon.cli.main_if_1019
+  target: glon.cli.main_exit
+  edge_type: control
+- source: glon.cli.main_exit
+  target: glon.cli.main_merge_1019
+  edge_type: control
+- source: glon.cli.main_merge_1019
+  target: glon.cli.main_if_1023
+  edge_type: control
+- source: glon.cli.main_if_1023
+  target: glon.cli.main_return_1028
+  edge_type: control
+- source: glon.cli.main_return_1028
+  target: glon.cli.main_exit
+  edge_type: control
+- source: glon.cli.main_exit
+  target: glon.cli.main_merge_1023
+  edge_type: control
+- source: glon.cli.main_merge_1023
+  target: glon.cli.main_if_1032
+  edge_type: control
+- source: glon.cli.main_if_1032
+  target: glon.cli.main_exit
+  edge_type: control
+- source: glon.cli.main_exit
+  target: glon.cli.main_merge_1032
+  edge_type: control
+- source: glon.cli.main_merge_1032
+  target: glon.cli.main_if_1038
+  edge_type: control
+- source: glon.cli.main_if_1038
+  target: glon.cli.main_exit
+  edge_type: control
+- source: glon.cli.main_exit
+  target: glon.cli.main_merge_1038
+  edge_type: control
+- source: glon.cli.main_merge_1038
+  target: glon.cli.main_if_1041
+  edge_type: control
+- source: glon.cli.main_if_1041
+  target: glon.cli.main_return_1043
+  edge_type: control
+- source: glon.cli.main_return_1043
+  target: glon.cli.main_exit
+  edge_type: control
+- source: glon.cli.main_exit
+  target: glon.cli.main_merge_1041
+  edge_type: control
+- source: glon.cli.main_merge_1041
+  target: glon.cli.main_if_1048
+  edge_type: control
+- source: glon.cli.main_if_1048
+  target: glon.cli.main_return_1049
+  edge_type: control
+- source: glon.cli.main_return_1049
+  target: glon.cli.main_exit
+  edge_type: control
+- source: glon.cli.main_exit
+  target: glon.cli.main_merge_1048
+  edge_type: control
+- source: glon.cli.main_merge_1048
   target: glon.cli.main_exit
   edge_type: control
 modules:
@@ -4178,7 +4265,7 @@ functions:
     complexity:
       cyclomatic_complexity: 2
       cc_rank: A
-    centrality: 1.699986400108799e-05
+    centrality: 1.6803333781422235e-05
     reachability: unknown
   glon.cli.get_all_projects_with_time:
     name: get_all_projects_with_time
@@ -4227,12 +4314,14 @@ functions:
     called_by:
     - glon.cli.get_all_projects
     - glon.cli.main
+    - glon.cli.main
     - glon.cli.get_all_projects
+    - glon.cli.main
     - glon.cli.main
     complexity:
       cyclomatic_complexity: 8
       cc_rank: B
-    centrality: 0.0004929960560315518
+    centrality: 0.00048729667966124484
     reachability: unknown
   glon.cli._read_clipboard_text:
     name: _read_clipboard_text
@@ -4271,7 +4360,7 @@ functions:
     complexity:
       cyclomatic_complexity: 6
       cc_rank: B
-    centrality: 0.0005439956480348157
+    centrality: 0.0005377066810055115
     reachability: unknown
   glon.cli._extract_git_url_from_text:
     name: _extract_git_url_from_text
@@ -4324,7 +4413,7 @@ functions:
     complexity:
       cyclomatic_complexity: 6
       cc_rank: B
-    centrality: 0.0001699986400108799
+    centrality: 0.00016803333781422234
     reachability: unknown
   glon.cli._clipboard_url_candidate:
     name: _clipboard_url_candidate
@@ -4368,7 +4457,7 @@ functions:
     complexity:
       cyclomatic_complexity: 7
       cc_rank: B
-    centrality: 2.8333106668479982e-05
+    centrality: 2.800555630237039e-05
     reachability: unknown
   glon.cli.parse_git_url:
     name: parse_git_url
@@ -4424,7 +4513,7 @@ functions:
     complexity:
       cyclomatic_complexity: 4
       cc_rank: A
-    centrality: 0.0003909968720250238
+    centrality: 0.0003864766769727114
     reachability: unknown
   glon.cli.create_directory_structure:
     name: create_directory_structure
@@ -4465,7 +4554,7 @@ functions:
     complexity:
       cyclomatic_complexity: 2
       cc_rank: A
-    centrality: 1.699986400108799e-05
+    centrality: 1.6803333781422235e-05
     reachability: unknown
   glon.cli.clone_repository:
     name: clone_repository
@@ -4508,7 +4597,7 @@ functions:
     complexity:
       cyclomatic_complexity: 4
       cc_rank: A
-    centrality: 9.633256267283194e-05
+    centrality: 9.521889142805932e-05
     reachability: unknown
   glon.cli.grab_from_clipboard:
     name: grab_from_clipboard
@@ -4617,7 +4706,7 @@ functions:
     complexity:
       cyclomatic_complexity: 20
       cc_rank: C
-    centrality: 0.00031733079468697584
+    centrality: 0.0003136622305865484
     reachability: unknown
   glon.cli.parse_time_filter:
     name: parse_time_filter
@@ -4670,7 +4759,7 @@ functions:
     complexity:
       cyclomatic_complexity: 8
       cc_rank: B
-    centrality: 0.00010199918400652795
+    centrality: 0.00010082000268853341
     reachability: unknown
   glon.cli.list_projects:
     name: list_projects
@@ -4768,7 +4857,7 @@ functions:
     complexity:
       cyclomatic_complexity: 23
       cc_rank: D
-    centrality: 0.00027199782401740786
+    centrality: 0.00026885334050275576
     reachability: unknown
   glon.cli.open_in_ide:
     name: open_in_ide
@@ -4781,8 +4870,8 @@ functions:
     is_private: false
     is_property: false
     docstring: "Open a project in an IDE.\n\nArgs:\n    project_path: Path to project\
-      \ (e.g., \"owner/repo\" or full path)\n    ide: IDE to use (default: pycharm)\n\
-      \    \nReturns:\n    True if successful, False otherwise"
+      \ (e.g., \"owner/repo\" or full path)\n    ide: IDE to use (if None, will prompt\
+      \ user to select)\n    \nReturns:\n    True if successful, False otherwise"
     args:
     - project_path
     - ide
@@ -4803,8 +4892,11 @@ functions:
     - glon.cli.open_in_ide_return_548
     - glon.cli.open_in_ide_merge_546
     - glon.cli.open_in_ide_if_562
-    - glon.cli.open_in_ide_return_565
+    - glon.cli.open_in_ide_loop_566
     - glon.cli.open_in_ide_merge_562
+    - glon.cli.open_in_ide_if_590
+    - glon.cli.open_in_ide_return_593
+    - glon.cli.open_in_ide_merge_590
     calls:
     - Path
     - ide_commands.get
@@ -4814,6 +4906,11 @@ functions:
     - full_path.exists
     - print
     - full_path.is_dir
+    - print
+    - print
+    - print
+    - list
+    - enumerate
     - print
     - ide.lower
     - print
@@ -4831,11 +4928,22 @@ functions:
     - str
     - str
     - str
+    - ide_commands.keys
+    - print
+    - None.strip
+    - print
+    - print
+    - print
+    - int
+    - len
+    - print
     - print
     - print
     - Path
+    - input
     - None.join
     - ide_commands.keys
+    - len
     called_by:
     - glon.cli.main
     - glon.cli.main
@@ -4843,16 +4951,18 @@ functions:
     - glon.cli.main
     - glon.cli.main
     - glon.cli.main
+    - glon.cli.main
+    - glon.cli.main
     complexity:
-      cyclomatic_complexity: 9
-      cc_rank: B
-    centrality: 0.0001699986400108799
+      cyclomatic_complexity: 15
+      cc_rank: C
+    centrality: 0.00020164000537706682
     reachability: unknown
   glon.cli.main:
     name: main
     qualified_name: glon.cli.main
     file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-    line: 579
+    line: 607
     column: 0
     module: glon.cli
     is_method: false
@@ -4864,74 +4974,79 @@ functions:
     cfg_nodes:
     - glon.cli.main_entry
     - glon.cli.main_exit
-    - glon.cli.main_if_582
-    - glon.cli.main_if_590
-    - glon.cli.main_if_593
-    - glon.cli.main_if_596
-    - glon.cli.main_if_598
-    - glon.cli.main_merge_598
-    - glon.cli.main_merge_596
-    - glon.cli.main_merge_593
-    - glon.cli.main_loop_646
-    - glon.cli.main_return_650
-    - glon.cli.main_merge_590
-    - glon.cli.main_if_656
-    - glon.cli.main_if_659
-    - glon.cli.main_loop_674
-    - glon.cli.main_return_686
-    - glon.cli.main_merge_659
-    - glon.cli.main_merge_656
-    - glon.cli.main_if_697
-    - glon.cli.main_loop_700
-    - glon.cli.main_return_702
-    - glon.cli.main_merge_697
-    - glon.cli.main_if_708
-    - glon.cli.main_if_720
-    - glon.cli.main_if_725
-    - glon.cli.main_loop_729
-    - glon.cli.main_merge_725
-    - glon.cli.main_merge_720
-    - glon.cli.main_merge_708
-    - glon.cli.main_if_774
-    - glon.cli.main_merge_774
-    - glon.cli.main_if_785
-    - glon.cli.main_merge_785
-    - glon.cli.main_return_791
-    - glon.cli.main_merge_582
+    - glon.cli.main_if_610
+    - glon.cli.main_if_618
+    - glon.cli.main_if_621
+    - glon.cli.main_if_624
+    - glon.cli.main_if_626
+    - glon.cli.main_merge_626
+    - glon.cli.main_merge_624
+    - glon.cli.main_merge_621
+    - glon.cli.main_if_674
+    - glon.cli.main_return_676
+    - glon.cli.main_merge_674
+    - glon.cli.main_loop_686
+    - glon.cli.main_if_689
+    - glon.cli.main_merge_689
+    - glon.cli.main_return_736
+    - glon.cli.main_merge_618
+    - glon.cli.main_if_742
+    - glon.cli.main_if_745
+    - glon.cli.main_loop_760
+    - glon.cli.main_return_772
+    - glon.cli.main_merge_745
+    - glon.cli.main_merge_742
+    - glon.cli.main_if_783
+    - glon.cli.main_loop_786
+    - glon.cli.main_return_788
+    - glon.cli.main_merge_783
     - glon.cli.main_if_794
-    - glon.cli.main_if_836
-    - glon.cli.main_if_838
-    - glon.cli.main_merge_838
-    - glon.cli.main_merge_836
-    - glon.cli.main_return_848
+    - glon.cli.main_if_806
+    - glon.cli.main_if_811
+    - glon.cli.main_loop_815
+    - glon.cli.main_merge_811
+    - glon.cli.main_merge_806
     - glon.cli.main_merge_794
-    - glon.cli.main_if_851
-    - glon.cli.main_return_882
-    - glon.cli.main_merge_851
-    - glon.cli.main_if_921
-    - glon.cli.main_if_923
-    - glon.cli.main_merge_923
-    - glon.cli.main_merge_921
-    - glon.cli.main_if_926
-    - glon.cli.main_if_928
-    - glon.cli.main_return_930
-    - glon.cli.main_merge_928
-    - glon.cli.main_merge_926
-    - glon.cli.main_if_933
-    - glon.cli.main_merge_933
+    - glon.cli.main_if_860
+    - glon.cli.main_merge_860
+    - glon.cli.main_if_871
+    - glon.cli.main_merge_871
+    - glon.cli.main_return_877
+    - glon.cli.main_merge_610
+    - glon.cli.main_if_880
+    - glon.cli.main_if_922
+    - glon.cli.main_if_924
+    - glon.cli.main_merge_924
+    - glon.cli.main_merge_922
+    - glon.cli.main_return_934
+    - glon.cli.main_merge_880
     - glon.cli.main_if_937
-    - glon.cli.main_return_942
+    - glon.cli.main_return_968
     - glon.cli.main_merge_937
-    - glon.cli.main_if_946
-    - glon.cli.main_merge_946
-    - glon.cli.main_if_952
-    - glon.cli.main_merge_952
-    - glon.cli.main_if_955
-    - glon.cli.main_return_957
-    - glon.cli.main_merge_955
-    - glon.cli.main_if_962
-    - glon.cli.main_return_963
-    - glon.cli.main_merge_962
+    - glon.cli.main_if_1007
+    - glon.cli.main_if_1009
+    - glon.cli.main_merge_1009
+    - glon.cli.main_merge_1007
+    - glon.cli.main_if_1012
+    - glon.cli.main_if_1014
+    - glon.cli.main_return_1016
+    - glon.cli.main_merge_1014
+    - glon.cli.main_merge_1012
+    - glon.cli.main_if_1019
+    - glon.cli.main_merge_1019
+    - glon.cli.main_if_1023
+    - glon.cli.main_return_1028
+    - glon.cli.main_merge_1023
+    - glon.cli.main_if_1032
+    - glon.cli.main_merge_1032
+    - glon.cli.main_if_1038
+    - glon.cli.main_merge_1038
+    - glon.cli.main_if_1041
+    - glon.cli.main_return_1043
+    - glon.cli.main_merge_1041
+    - glon.cli.main_if_1048
+    - glon.cli.main_return_1049
+    - glon.cli.main_merge_1048
     calls:
     - argparse.ArgumentParser
     - parser.add_argument
@@ -4975,8 +5090,12 @@ functions:
     - print
     - None.startswith
     - glon.cli._read_clipboard_text
+    - glon.cli.get_all_projects_with_time
     - print
     - print
+    - datetime.now
+    - now.replace
+    - enumerate
     - print
     - os.path.isabs
     - None.exists
@@ -4992,6 +5111,9 @@ functions:
     - print
     - glon.cli._extract_git_url_from_text
     - print
+    - timedelta
+    - print
+    - None.strip
     - full_path.exists
     - full_path.is_dir
     - argparse.ArgumentParser
@@ -5006,6 +5128,16 @@ functions:
     - None.join
     - len
     - glon.cli.parse_git_url
+    - print
+    - int
+    - len
+    - argparse.ArgumentParser
+    - parser.add_argument
+    - parser.parse_args
+    - glon.cli.open_in_ide
+    - print
+    - print
+    - print
     - Path
     - Path
     - arg.startswith
@@ -5024,6 +5156,8 @@ functions:
     - parser.add_argument
     - parser.parse_args
     - glon.cli.open_in_ide
+    - len
+    - input
     - ide_args.append
     - print
     - None.strip
@@ -5032,6 +5166,7 @@ functions:
     - glon.cli.create_directory_structure
     - glon.cli.clone_repository
     - str
+    - arg.startswith
     - ide_args.append
     - Path
     - print
@@ -5046,8 +5181,9 @@ functions:
     - print
     - print
     - len
+    - len
     complexity:
-      cyclomatic_complexity: 68
+      cyclomatic_complexity: 79
       cc_rank: F
     centrality: 0.0
     reachability: unknown
@@ -5103,8 +5239,8 @@ data_flows:
   glon.utils.cleanup_temp_files.filename:
     variable: filename
     dependencies:
-    - os
     - temp_dir
+    - os
   os.listdir.arg0:
     variable: os.listdir.arg0
     dependencies:
@@ -5112,9 +5248,9 @@ data_flows:
   glon.utils.cleanup_temp_files.file_path:
     variable: file_path
     dependencies:
-    - os
-    - filename
     - temp_dir
+    - filename
+    - os
   os.path.join.arg0:
     variable: os.path.join.arg0
     dependencies:
@@ -5152,21 +5288,23 @@ data_flows:
   glon.utils.monitor_memory_usage.sample:
     variable: sample
     dependencies:
-    - gc
-    - memory_info
-    - len
-    - time
     - process
+    - len
+    - memory_info
+    - time
+    - gc
   len.arg0:
     variable: len.arg0
     dependencies:
-    - parts
-    - open_args
-    - text
+    - available_ides
     - sys
+    - recent_projects
+    - open_args
     - projects
+    - text
     - matching_projects
     - yesterday_projects
+    - parts
   samples.append.arg0:
     variable: samples.append.arg0
     dependencies:
@@ -5178,26 +5316,26 @@ data_flows:
   glon.utils.force_garbage_collection.results:
     variable: results
     dependencies:
+    - before_count
     - collected
     - after_count
-    - before_count
   glon.utils.force_garbage_collection.generation:
     variable: generation
     dependencies:
-    - collected
-    - after_count
     - range
+    - collected
     - before_count
+    - after_count
   glon.utils.force_garbage_collection.before_count:
     variable: before_count
     dependencies:
-    - gc
     - len
+    - gc
   glon.utils.force_garbage_collection.collected:
     variable: collected
     dependencies:
-    - gc
     - generation
+    - gc
   gc.collect.arg0:
     variable: gc.collect.arg0
     dependencies:
@@ -5205,41 +5343,44 @@ data_flows:
   glon.utils.force_garbage_collection.after_count:
     variable: after_count
     dependencies:
-    - gc
     - len
+    - gc
   print.arg0:
     variable: print.arg0
     dependencies:
-    - repo
-    - git_marker
-    - i
-    - owner
-    - is_git
-    - age_str
-    - source_path
-    - e
-    - clipboard_text
-    - target_dir
-    - time_filter
+    - p
     - ide_commands
-    - project
-    - path
-    - len
-    - projects
-    - url
-    - project_path
-    - base_path
+    - owner
+    - args
+    - target_dir
     - total_count
+    - time_filter
+    - choice
+    - project
+    - repo
+    - base_path
+    - project_name
+    - project_path
+    - git_marker
+    - project_to_open
+    - source_path
+    - clipboard_text
+    - projects
+    - ide
+    - i
+    - git_url
+    - full_path
+    - path
+    - url
+    - len
+    - is_git
+    - recent_projects
     - date_str
     - link_path
-    - args
-    - git_url
-    - ide
+    - e
     - dir_name
-    - full_path
-    - project_name
-    - p
-    - project_to_open
+    - age_str
+    - ide_name
   glon.utils.find_object_cycles.cycles:
     variable: cycles
   glon.utils.find_object_cycles.visited:
@@ -5269,8 +5410,8 @@ data_flows:
   cycles.append.arg0:
     variable: cycles.append.arg0
     dependencies:
-    - path
     - current_obj
+    - path
     - cycle_start
   visited.add.arg0:
     variable: visited.add.arg0
@@ -5296,8 +5437,8 @@ data_flows:
   _find_cycles.arg0:
     variable: _find_cycles.arg0
     dependencies:
-    - obj
     - ref
+    - obj
   _find_cycles.arg1:
     variable: _find_cycles.arg1
     dependencies:
@@ -5325,8 +5466,8 @@ data_flows:
   glon.utils.analyze_memory_usage.type_counts:
     variable: type_counts
     dependencies:
-    - type_counts
     - obj_type
+    - type_counts
   glon.utils.analyze_memory_usage.obj:
     variable: obj
     dependencies:
@@ -5334,10 +5475,10 @@ data_flows:
   glon.utils.analyze_memory_usage.obj_type:
     variable: obj_type
     dependencies:
-    - type_counts
     - obj_type
-    - obj
+    - type_counts
     - type
+    - obj
   type.arg0:
     variable: type.arg0
     dependencies:
@@ -5355,8 +5496,8 @@ data_flows:
   sorted.arg0:
     variable: sorted.arg0
     dependencies:
-    - projects
     - p
+    - projects
     - projects_with_time
   gc.set_debug.arg0:
     variable: gc.set_debug.arg0
@@ -5418,9 +5559,9 @@ data_flows:
   glon.core._record_stats.stats:
     variable: stats
     dependencies:
+    - len
     - self
     - time
-    - len
   self.stats_history.append.arg0:
     variable: self.stats_history.append.arg0
     dependencies:
@@ -5428,8 +5569,8 @@ data_flows:
   glon.core.take_snapshot.process:
     variable: process
     dependencies:
-    - os
     - psutil
+    - os
   glon.core.take_snapshot.memory_info:
     variable: memory_info
     dependencies:
@@ -5437,11 +5578,11 @@ data_flows:
   glon.core.take_snapshot.snapshot:
     variable: snapshot
     dependencies:
-    - gc
-    - memory_info
     - len
+    - memory_info
     - time
     - label
+    - gc
   self.snapshots.append.arg0:
     variable: self.snapshots.append.arg0
     dependencies:
@@ -5449,25 +5590,25 @@ data_flows:
   glon.core.track_object.obj_id:
     variable: obj_id
     dependencies:
-    - obj
-    - str
-    - ref
     - ref_type
-    - time
     - type
-    - label
     - id
+    - obj
+    - label
+    - ref
+    - time
+    - str
   str.arg0:
     variable: str.arg0
     dependencies:
-    - full_path
     - target_dir
+    - full_path
     - project_path
   glon.core.track_object.ref:
     variable: ref
     dependencies:
-    - obj
     - weakref
+    - obj
   weakref.ref.arg0:
     variable: weakref.ref.arg0
     dependencies:
@@ -5477,11 +5618,11 @@ data_flows:
   glon.core.track_object.self:
     variable: self
     dependencies:
-    - obj
-    - ref
     - ref_type
-    - time
     - type
+    - obj
+    - time
+    - ref
     - label
   glon.core.get_tracked_objects.alive:
     variable: alive
@@ -5518,8 +5659,8 @@ data_flows:
   glon.cli.get_all_projects.projects_with_time:
     variable: projects_with_time
     dependencies:
-    - get_all_projects_with_time
     - base_path
+    - get_all_projects_with_time
   get_all_projects_with_time.arg0:
     variable: get_all_projects_with_time.arg0
     dependencies:
@@ -5536,10 +5677,10 @@ data_flows:
   Path.arg0:
     variable: Path.arg0
     dependencies:
-    - base_path
-    - full_path
-    - project_name
     - os
+    - full_path
+    - base_path
+    - project_name
     - project_path
     - clipboard_text
   glon.cli.get_all_projects_with_time.projects:
@@ -5564,9 +5705,9 @@ data_flows:
   projects.append.arg0:
     variable: projects.append.arg0
     dependencies:
-    - owner_dir
-    - mtime
     - repo_dir
+    - mtime
+    - owner_dir
   glon.cli._read_clipboard_text.root:
     variable: root
     dependencies:
@@ -5586,10 +5727,10 @@ data_flows:
   subprocess.run.arg0:
     variable: subprocess.run.arg0
     dependencies:
-    - url
-    - str
-    - cmd
     - target_dir
+    - cmd
+    - str
+    - url
   glon.cli._extract_git_url_from_text.lines:
     variable: lines
     dependencies:
@@ -5597,30 +5738,30 @@ data_flows:
   glon.cli._extract_git_url_from_text.line:
     variable: line
     dependencies:
-    - lines
     - line
+    - lines
   parse_git_url.arg0:
     variable: parse_git_url.arg0
     dependencies:
-    - text
-    - args
-    - git_url
-    - clipboard_text
     - line
+    - clipboard_text
+    - text
+    - git_url
+    - args
   glon.cli._extract_git_url_from_text.ssh_pattern:
     variable: ssh_pattern
   glon.cli._extract_git_url_from_text.ssh_match:
     variable: ssh_match
     dependencies:
-    - re
     - ssh_pattern
     - line
+    - re
   re.search.arg0:
     variable: re.search.arg0
     dependencies:
     - ssh_pattern
-    - https_pattern
     - https_pattern_no_git
+    - https_pattern
   re.search.arg1:
     variable: re.search.arg1
     dependencies:
@@ -5630,42 +5771,42 @@ data_flows:
   glon.cli._extract_git_url_from_text.https_match:
     variable: https_match
     dependencies:
+    - line
     - re
     - https_pattern
-    - line
   glon.cli._extract_git_url_from_text.https_pattern_no_git:
     variable: https_pattern_no_git
   glon.cli._extract_git_url_from_text.https_match_no_git:
     variable: https_match_no_git
     dependencies:
-    - re
     - https_pattern_no_git
+    - re
     - line
   glon.cli._clipboard_url_candidate.text:
     variable: text
     dependencies:
-    - _read_clipboard_text
     - text
+    - _read_clipboard_text
   any.arg0:
     variable: any.arg0
     dependencies:
-    - text
     - target_dir
+    - text
     - ch
   glon.cli.parse_git_url.ssh_pattern:
     variable: ssh_pattern
   glon.cli.parse_git_url.ssh_match:
     variable: ssh_match
     dependencies:
-    - re
     - ssh_pattern
+    - re
     - url
   re.match.arg0:
     variable: re.match.arg0
     dependencies:
     - ssh_pattern
-    - https_pattern
     - https_pattern_no_git
+    - https_pattern
   re.match.arg1:
     variable: re.match.arg1
     dependencies:
@@ -5676,15 +5817,15 @@ data_flows:
     variable: https_match
     dependencies:
     - re
-    - https_pattern
     - url
+    - https_pattern
   glon.cli.parse_git_url.https_pattern_no_git:
     variable: https_pattern_no_git
   glon.cli.parse_git_url.https_match_no_git:
     variable: https_match_no_git
     dependencies:
-    - re
     - https_pattern_no_git
+    - re
     - url
   glon.cli.create_directory_structure.base_path:
     variable: base_path
@@ -5693,22 +5834,22 @@ data_flows:
   glon.cli.create_directory_structure.target_dir:
     variable: target_dir
     dependencies:
-    - owner
     - base_path
     - Path
+    - owner
     - repo
   glon.cli.clone_repository.result:
     variable: result
     dependencies:
     - subprocess
-    - url
-    - str
     - target_dir
+    - str
+    - url
   glon.cli.grab_from_clipboard.clipboard_text:
     variable: clipboard_text
     dependencies:
-    - _read_clipboard_text
     - clipboard_text
+    - _read_clipboard_text
   glon.cli.grab_from_clipboard.parsed:
     variable: parsed
     dependencies:
@@ -5725,12 +5866,12 @@ data_flows:
   glon.cli.grab_from_clipboard.target_dir:
     variable: target_dir
     dependencies:
-    - base_path
-    - repo
-    - dir_name
-    - owner
     - create_directory_structure
     - Path
+    - base_path
+    - dir_name
+    - owner
+    - repo
   create_directory_structure.arg0:
     variable: create_directory_structure.arg0
     dependencies:
@@ -5748,8 +5889,8 @@ data_flows:
     variable: success
     dependencies:
     - clipboard_text
-    - clone_repository
     - target_dir
+    - clone_repository
   clone_repository.arg0:
     variable: clone_repository.arg0
     dependencies:
@@ -5811,11 +5952,11 @@ data_flows:
   glon.cli.list_projects.filter_date:
     variable: filter_date
     dependencies:
-    - datetime
     - days
-    - parse_time_filter
-    - timedelta
     - time_filter
+    - timedelta
+    - datetime
+    - parse_time_filter
   parse_time_filter.arg0:
     variable: parse_time_filter.arg0
     dependencies:
@@ -5823,19 +5964,19 @@ data_flows:
   glon.cli.list_projects.days:
     variable: days
     dependencies:
-    - int
     - time_filter
+    - int
   int.arg0:
     variable: int.arg0
     dependencies:
-    - choice
     - time_filter
+    - choice
   glon.cli.list_projects.now:
     variable: now
     dependencies:
-    - days
     - datetime
     - timedelta
+    - days
   glon.cli.list_projects.projects:
     variable: projects
     dependencies:
@@ -5852,14 +5993,14 @@ data_flows:
   glon.cli.list_projects.mtime:
     variable: mtime
     dependencies:
-    - project
     - datetime
+    - project
     - repo_dir
   glon.cli.list_projects.total_count:
     variable: total_count
     dependencies:
-    - projects
     - len
+    - projects
   glon.cli.list_projects.project:
     variable: project
     dependencies:
@@ -5912,13 +6053,13 @@ data_flows:
   glon.cli.open_in_ide.full_path:
     variable: full_path
     dependencies:
-    - base_path
-    - repo
-    - full_path
-    - owner
     - os
-    - project_path
+    - full_path
     - Path
+    - base_path
+    - project_path
+    - owner
+    - repo
   os.path.expanduser.arg0:
     variable: os.path.expanduser.arg0
     dependencies:
@@ -5928,6 +6069,45 @@ data_flows:
     dependencies:
     - full_path
     - str
+  glon.cli.open_in_ide.available_ides:
+    variable: available_ides
+    dependencies:
+    - ide_commands
+    - list
+  list.arg0:
+    variable: list.arg0
+    dependencies:
+    - ide_commands
+  enumerate.arg0:
+    variable: enumerate.arg0
+    dependencies:
+    - open_args
+    - matching_projects_with_time
+    - available_ides
+    - recent_projects
+  glon.cli.open_in_ide.choice:
+    variable: choice
+    dependencies:
+    - len
+    - available_ides
+    - input
+  input.arg0:
+    variable: input.arg0
+    dependencies:
+    - len
+    - matching_projects
+    - available_ides
+    - recent_projects
+  glon.cli.open_in_ide.idx:
+    variable: idx
+    dependencies:
+    - int
+    - choice
+  glon.cli.open_in_ide.ide:
+    variable: ide
+    dependencies:
+    - idx
+    - available_ides
   glon.cli.open_in_ide.cmd:
     variable: cmd
     dependencies:
@@ -5984,8 +6164,8 @@ data_flows:
   glon.cli.main.project_name:
     variable: project_name
     dependencies:
-    - owner
     - open_args
+    - owner
     - repo
   glon.cli.main.base_path:
     variable: base_path
@@ -5994,26 +6174,26 @@ data_flows:
   glon.cli.main.project_path:
     variable: project_path
     dependencies:
-    - base_path
-    - repo
-    - owner
     - target_dir
     - Path
+    - base_path
+    - owner
+    - repo
   glon.cli.main.target_dir:
     variable: target_dir
     dependencies:
-    - repo
-    - owner
-    - args
     - create_directory_structure
+    - owner
+    - repo
+    - args
   glon.cli.main.success:
     variable: success
     dependencies:
+    - target_dir
     - grab_from_clipboard
-    - args
     - git_url
     - clone_repository
-    - target_dir
+    - args
   glon.cli.main.project:
     variable: project
     dependencies:
@@ -6025,75 +6205,44 @@ data_flows:
   glon.cli.main.ide_args:
     variable: ide_args
     dependencies:
-    - arg
     - open_args
+    - arg
   glon.cli.main.args:
     variable: args
     dependencies:
-    - open_args
-    - list_args
     - grab_args
-    - sys
-    - _clipboard_url_candidate
-    - parser
     - ide_args
+    - sys
+    - parser
+    - list_args
+    - open_args
+    - _clipboard_url_candidate
   parser.parse_args.arg0:
     variable: parser.parse_args.arg0
     dependencies:
-    - open_args
     - list_args
-    - grab_args
+    - open_args
     - ide_args
+    - grab_args
   open_in_ide.arg0:
     variable: open_in_ide.arg0
     dependencies:
-    - full_path
-    - project_to_open
-    - str
     - project_path
+    - full_path
+    - str
+    - project_to_open
   open_in_ide.arg1:
     variable: open_in_ide.arg1
     dependencies:
     - args
-  glon.cli.main.full_path:
-    variable: full_path
-    dependencies:
-    - project_name
-    - Path
-  glon.cli.main.skip_next:
-    variable: skip_next
-  enumerate.arg0:
-    variable: enumerate.arg0
-    dependencies:
-    - open_args
-    - matching_projects_with_time
-  ide_args.append.arg0:
-    variable: ide_args.append.arg0
-    dependencies:
-    - arg
-    - open_args
-    - i
   glon.cli.main.all_projects_with_time:
     variable: all_projects_with_time
     dependencies:
     - get_all_projects_with_time
-  glon.cli.main.matching_projects_with_time:
-    variable: matching_projects_with_time
+  glon.cli.main.recent_projects:
+    variable: recent_projects
     dependencies:
-    - project_name
-    - p
     - all_projects_with_time
-  glon.cli.main.matching_projects:
-    variable: matching_projects
-    dependencies:
-    - p
-    - matching_projects_with_time
-  glon.cli.main.project_to_open:
-    variable: project_to_open
-    dependencies:
-    - matching_projects
-    - most_recent
-    - idx
   glon.cli.main.now:
     variable: now
     dependencies:
@@ -6105,30 +6254,8 @@ data_flows:
   glon.cli.main.yesterday:
     variable: yesterday
     dependencies:
-    - today
     - timedelta
-  glon.cli.main.today_projects:
-    variable: today_projects
-    dependencies:
     - today
-    - p
-    - matching_projects_with_time
-  glon.cli.main.yesterday_projects:
-    variable: yesterday_projects
-    dependencies:
-    - yesterday
-    - p
-    - matching_projects_with_time
-  glon.cli.main.most_recent:
-    variable: most_recent
-    dependencies:
-    - today_projects
-    - max
-    - x
-  max.arg0:
-    variable: max.arg0
-    dependencies:
-    - today_projects
   glon.cli.main.mtime:
     variable: mtime
     dependencies:
@@ -6145,25 +6272,74 @@ data_flows:
   glon.cli.main.choice:
     variable: choice
     dependencies:
+    - len
     - matching_projects
     - input
-    - len
-  input.arg0:
-    variable: input.arg0
-    dependencies:
-    - matching_projects
-    - len
+    - recent_projects
   glon.cli.main.idx:
     variable: idx
     dependencies:
-    - choice
     - int
+    - choice
+  glon.cli.main.project_to_open:
+    variable: project_to_open
+    dependencies:
+    - recent_projects
+    - idx
+    - matching_projects
+    - most_recent
+  glon.cli.main.full_path:
+    variable: full_path
+    dependencies:
+    - project_name
+    - Path
+  glon.cli.main.skip_next:
+    variable: skip_next
+  ide_args.append.arg0:
+    variable: ide_args.append.arg0
+    dependencies:
+    - open_args
+    - arg
+    - i
+  glon.cli.main.matching_projects_with_time:
+    variable: matching_projects_with_time
+    dependencies:
+    - all_projects_with_time
+    - p
+    - project_name
+  glon.cli.main.matching_projects:
+    variable: matching_projects
+    dependencies:
+    - p
+    - matching_projects_with_time
+  glon.cli.main.today_projects:
+    variable: today_projects
+    dependencies:
+    - p
+    - today
+    - matching_projects_with_time
+  glon.cli.main.yesterday_projects:
+    variable: yesterday_projects
+    dependencies:
+    - p
+    - yesterday
+    - matching_projects_with_time
+  glon.cli.main.most_recent:
+    variable: most_recent
+    dependencies:
+    - max
+    - today_projects
+    - x
+  max.arg0:
+    variable: max.arg0
+    dependencies:
+    - today_projects
   glon.cli.main.project_arg:
     variable: project_arg
     dependencies:
+    - ChoicesCompleter
     - all_projects
     - parser
-    - ChoicesCompleter
   ChoicesCompleter.arg0:
     variable: ChoicesCompleter.arg0
     dependencies:
@@ -6193,8 +6369,8 @@ data_flows:
   glon.cli.main.use_clone_subcommand:
     variable: use_clone_subcommand
     dependencies:
-    - sys
     - len
+    - sys
 metrics:
   glon.utils.cleanup_temp_files:
     fan_in: 0
@@ -6432,15 +6608,15 @@ metrics:
       cc_rank: D
   glon.cli.open_in_ide:
     fan_in: 1
-    fan_out: 14
+    fan_out: 19
     complexity:
-      cyclomatic_complexity: 9
-      cc_rank: B
+      cyclomatic_complexity: 15
+      cc_rank: C
   glon.cli.main:
     fan_in: 0
     fan_out: 41
     complexity:
-      cyclomatic_complexity: 68
+      cyclomatic_complexity: 79
       cc_rank: F
 smells:
 - name: 'God Function: monitor_memory_usage'
@@ -6529,138 +6705,139 @@ smells:
   type: god_function
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
   line: 512
-  severity: 0.57
-  description: 'Function ''open_in_ide'' is oversized: CC=9, fan-out=14, mutations=12.'
+  severity: 0.8049999999999999
+  description: 'Function ''open_in_ide'' is oversized: CC=15, fan-out=19, mutations=16.'
   context:
-    fan_out: 14
-    mutations: 12
-    complexity: 9
+    fan_out: 19
+    mutations: 16
+    complexity: 15
     function: glon.cli.open_in_ide
 - name: 'God Function: main'
   type: god_function
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 579
+  line: 607
   severity: 1.0
-  description: 'Function ''main'' is oversized: CC=68, fan-out=41, mutations=95.'
+  description: 'Function ''main'' is oversized: CC=79, fan-out=41, mutations=114.'
   context:
     fan_out: 41
-    mutations: 95
-    complexity: 68
+    mutations: 114
+    complexity: 79
     function: glon.cli.main
 - name: 'Shotgun Surgery: base_path'
   type: shotgun_surgery
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 579
+  line: 405
   severity: 0.8
   description: Mutation of variable 'base_path' spans 6 functions. Changing this logic
     requires work in many places.
   context:
     variable: base_path
     affected_functions:
-    - glon.cli.main
-    - glon.cli.create_directory_structure
-    - glon.cli.open_in_ide
-    - glon.cli.grab_from_clipboard
-    - glon.cli.get_all_projects_with_time
     - glon.cli.list_projects
+    - glon.cli.grab_from_clipboard
+    - glon.cli.create_directory_structure
+    - glon.cli.get_all_projects_with_time
+    - glon.cli.open_in_ide
+    - glon.cli.main
 coupling:
   module_interactions:
     glon.utils:
-    - visited
-    - process
-    - logging
-    - gc
-    - sorted
-    - path
-    - type_counts
-    - len
-    - set
-    - psutil
-    - samples
-    - _find_cycles
+    - range
     - ImportError
+    - _find_cycles
+    - cycles
+    - logging
+    - process
+    - visited
+    - type
+    - sys
+    - psutil
+    - type_counts
+    - time
+    - logger
+    - gc
+    - samples
+    - id
     - tempfile
     - os
-    - print
+    - set
+    - path
+    - len
     - handler
-    - logger
-    - range
-    - sys
-    - cycles
-    - time
-    - type
-    - id
-    glon.core:
-    - gc
-    - self
-    - snap2
-    - psutil
-    - str
-    - snap1
-    - weakref
-    - len
-    - os
-    - time
-    - type
-    - process
-    - IndexError
-    - info
-    - id
-    glon.cli:
-    - datetime
-    - ssh_match
-    - str
-    - argparse
-    - subprocess
-    - any
-    - https_match
-    - source_path
-    - clipboard_text
-    - target_dir
-    - ide_commands
-    - now
-    - input
-    - glon
     - sorted
-    - int
-    - text
-    - len
-    - projects
-    - re
-    - ChoicesCompleter
-    - project_path
-    - owner_dir
-    - enumerate
-    - mtime
-    - timedelta
-    - ide_args
-    - tkinter
-    - root
-    - arg
-    - os
-    - link_path
     - print
-    - ide
-    - line
+    glon.core:
+    - process
+    - os
+    - info
+    - len
+    - str
+    - type
+    - snap2
+    - id
+    - weakref
+    - psutil
+    - self
+    - IndexError
+    - time
+    - gc
+    - snap1
+    glon.cli:
     - Path
-    - max
-    - full_path
-    - project_name
+    - arg
+    - argparse
     - argcomplete
-    - base_path_obj
-    - shutil
-    - repo_dir
-    - None
+    - tkinter
+    - https_match
     - parser
-    - filter_str
     - https_match_no_git
+    - enumerate
+    - ide_commands
+    - datetime
+    - target_dir
+    - mtime
+    - text
+    - shutil
+    - base_path_obj
+    - subprocess
+    - repo_dir
+    - ChoicesCompleter
+    - None
+    - any
+    - ide_args
+    - project_path
+    - project_name
+    - owner_dir
+    - source_path
+    - re
+    - projects
+    - clipboard_text
+    - ide
+    - ssh_match
+    - now
+    - str
+    - int
+    - filter_str
+    - input
+    - line
+    - os
+    - full_path
+    - len
+    - glon
+    - link_path
+    - sorted
+    - root
+    - list
+    - timedelta
+    - max
+    - print
 mutations:
 - variable: __version__
   file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
   line: 8
   type: assign
   scope: glon
-  context: '''0.1.23'''
+  context: '''0.1.24'''
 - variable: __author__
   file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
   line: 9
@@ -7639,511 +7816,546 @@ mutations:
     ''vscode'': [''code'', str(full_path)], ''code'': [''code'', str(full_path)],
     ''webstorm'': [''webstorm'', str(full_path)], ''goland'': [''goland'', str(full_path)],
     ''rider'': [''rider'', str(full_path)]}'
+- variable: available_ides
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 565
+  type: assign
+  scope: glon.cli.open_in_ide
+  context: list(ide_commands.keys())
+- variable: choice
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 571
+  type: assign
+  scope: glon.cli.open_in_ide
+  context: 'input(f''Select IDE (1-{len(available_ides)}): '').strip()'
+- variable: idx
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 576
+  type: assign
+  scope: glon.cli.open_in_ide
+  context: int(choice) - 1
+- variable: ide
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 578
+  type: assign
+  scope: glon.cli.open_in_ide
+  context: available_ides[idx]
 - variable: cmd
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 561
+  line: 589
   type: assign
   scope: glon.cli.open_in_ide
   context: ide_commands.get(ide.lower())
 - variable: subprocess
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 568
+  line: 596
   type: method_call
   scope: glon.cli.open_in_ide
   context: call to Popen
 - variable: open_args
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 584
+  line: 612
   type: assign
   scope: glon.cli.main
   context: '[arg for arg in sys.argv[1:] if arg != ''open'']'
 - variable: all_projects
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 587
+  line: 615
   type: assign
   scope: glon.cli.main
   context: get_all_projects()
 - variable: clipboard_content
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 592
+  line: 620
   type: assign
   scope: glon.cli.main
   context: _read_clipboard_text()
 - variable: git_url
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 595
+  line: 623
   type: assign
   scope: glon.cli.main
   context: _extract_git_url_from_text(clipboard_content)
 - variable: parsed
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 597
+  line: 625
   type: assign
   scope: glon.cli.main
   context: parse_git_url(git_url)
 - variable: owner
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 599
+  line: 627
   type: assign
   scope: glon.cli.main
   context: parsed
 - variable: repo
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 599
+  line: 627
   type: assign
   scope: glon.cli.main
   context: parsed
 - variable: owner
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 599
+  line: 627
   type: assign
   scope: glon.cli.main
   context: parsed
 - variable: repo
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 599
+  line: 627
   type: assign
   scope: glon.cli.main
   context: parsed
 - variable: project_name
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 600
+  line: 628
   type: assign
   scope: glon.cli.main
   context: f'{owner}/{repo}'
 - variable: base_path
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 604
+  line: 632
   type: assign
   scope: glon.cli.main
   context: os.path.expanduser('~/github')
 - variable: project_path
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 605
+  line: 633
   type: assign
   scope: glon.cli.main
   context: Path(base_path) / owner / repo
 - variable: target_dir
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 613
+  line: 641
   type: assign
   scope: glon.cli.main
   context: create_directory_structure(owner, repo)
 - variable: success
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 614
+  line: 642
   type: assign
   scope: glon.cli.main
   context: clone_repository(git_url, target_dir)
 - variable: project_path
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 616
+  line: 644
   type: assign
   scope: glon.cli.main
   context: target_dir
 - variable: parser
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 626
+  line: 654
   type: assign
   scope: glon.cli.main
   context: argparse.ArgumentParser(description='Open project in IDE', prog='glon open')
 - variable: parser
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 630
+  line: 658
   type: method_call
   scope: glon.cli.main
   context: call to add_argument
 - variable: ide_args
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 638
+  line: 666
   type: assign
   scope: glon.cli.main
   context: '[arg for arg in open_args if arg.startswith(''--'')]'
 - variable: args
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 639
-  type: assign
-  scope: glon.cli.main
-  context: parser.parse_args(ide_args)
-- variable: project_name
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 653
-  type: assign
-  scope: glon.cli.main
-  context: open_args[0]
-- variable: full_path
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 658
-  type: assign
-  scope: glon.cli.main
-  context: Path(project_name).resolve()
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 661
-  type: assign
-  scope: glon.cli.main
-  context: argparse.ArgumentParser(description='Open project in IDE', prog='glon open')
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 665
-  type: method_call
-  scope: glon.cli.main
-  context: call to add_argument
-- variable: ide_args
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 672
-  type: assign
-  scope: glon.cli.main
-  context: '[]'
-- variable: skip_next
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 673
-  type: assign
-  scope: glon.cli.main
-  context: 'False'
-- variable: skip_next
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 676
-  type: assign
-  scope: glon.cli.main
-  context: 'False'
-- variable: ide_args
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 679
-  type: method_call
-  scope: glon.cli.main
-  context: call to append
-- variable: ide_args
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 682
-  type: method_call
-  scope: glon.cli.main
-  context: call to append
-- variable: skip_next
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 683
-  type: assign
-  scope: glon.cli.main
-  context: 'True'
-- variable: args
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 684
+  line: 667
   type: assign
   scope: glon.cli.main
   context: parser.parse_args(ide_args)
 - variable: all_projects_with_time
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 689
+  line: 673
   type: assign
   scope: glon.cli.main
   context: get_all_projects_with_time()
-- variable: matching_projects_with_time
+- variable: recent_projects
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 692
+  line: 679
   type: assign
   scope: glon.cli.main
-  context: '[p for p in all_projects_with_time if project_name.lower() in p[''name''].lower()]'
-- variable: matching_projects
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 705
-  type: assign
-  scope: glon.cli.main
-  context: '[p[''name''] for p in matching_projects_with_time]'
-- variable: project_to_open
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 709
-  type: assign
-  scope: glon.cli.main
-  context: matching_projects[0]
+  context: all_projects_with_time[:10]
 - variable: now
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 712
+  line: 682
   type: assign
   scope: glon.cli.main
   context: datetime.now()
 - variable: today
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 713
+  line: 683
   type: assign
   scope: glon.cli.main
   context: now.replace(hour=0, minute=0, second=0, microsecond=0)
 - variable: yesterday
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 714
+  line: 684
   type: assign
   scope: glon.cli.main
   context: today - timedelta(days=1)
-- variable: today_projects
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 717
-  type: assign
-  scope: glon.cli.main
-  context: '[p for p in matching_projects_with_time if p[''mtime''] >= today]'
-- variable: yesterday_projects
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 718
-  type: assign
-  scope: glon.cli.main
-  context: '[p for p in matching_projects_with_time if p[''mtime''] >= yesterday]'
-- variable: most_recent
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 722
-  type: assign
-  scope: glon.cli.main
-  context: 'max(today_projects, key=lambda x: x[''mtime''])'
-- variable: project_to_open
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 723
-  type: assign
-  scope: glon.cli.main
-  context: most_recent['name']
 - variable: mtime
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 730
+  line: 687
   type: assign
   scope: glon.cli.main
   context: p['mtime']
 - variable: age
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 731
+  line: 688
   type: assign
   scope: glon.cli.main
   context: now - mtime
 - variable: age_str
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 733
+  line: 690
   type: assign
   scope: glon.cli.main
   context: '''today'''
 - variable: age_str
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 735
+  line: 692
   type: assign
   scope: glon.cli.main
   context: '''yesterday'''
 - variable: age_str
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 737
+  line: 694
   type: assign
   scope: glon.cli.main
   context: f'{age.days} days ago'
 - variable: age_str
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 739
+  line: 696
   type: assign
   scope: glon.cli.main
   context: f'{age.days // 7} weeks ago'
 - variable: age_str
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 741
+  line: 698
   type: assign
   scope: glon.cli.main
   context: f'{age.days // 30} months ago'
 - variable: choice
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 746
+  line: 704
+  type: assign
+  scope: glon.cli.main
+  context: 'input(f''Select project (1-{len(recent_projects)}) or press Enter to cancel:
+    '').strip()'
+- variable: idx
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 709
+  type: assign
+  scope: glon.cli.main
+  context: int(choice) - 1
+- variable: project_to_open
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 711
+  type: assign
+  scope: glon.cli.main
+  context: recent_projects[idx]['name']
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 714
+  type: assign
+  scope: glon.cli.main
+  context: argparse.ArgumentParser(description='Open project in IDE', prog='glon open')
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 718
+  type: method_call
+  scope: glon.cli.main
+  context: call to add_argument
+- variable: ide_args
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 726
+  type: assign
+  scope: glon.cli.main
+  context: '[arg for arg in open_args if arg.startswith(''--'')]'
+- variable: args
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 727
+  type: assign
+  scope: glon.cli.main
+  context: parser.parse_args(ide_args)
+- variable: project_name
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 739
+  type: assign
+  scope: glon.cli.main
+  context: open_args[0]
+- variable: full_path
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 744
+  type: assign
+  scope: glon.cli.main
+  context: Path(project_name).resolve()
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 747
+  type: assign
+  scope: glon.cli.main
+  context: argparse.ArgumentParser(description='Open project in IDE', prog='glon open')
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 751
+  type: method_call
+  scope: glon.cli.main
+  context: call to add_argument
+- variable: ide_args
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 758
+  type: assign
+  scope: glon.cli.main
+  context: '[]'
+- variable: skip_next
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 759
+  type: assign
+  scope: glon.cli.main
+  context: 'False'
+- variable: skip_next
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 762
+  type: assign
+  scope: glon.cli.main
+  context: 'False'
+- variable: ide_args
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 765
+  type: method_call
+  scope: glon.cli.main
+  context: call to append
+- variable: ide_args
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 768
+  type: method_call
+  scope: glon.cli.main
+  context: call to append
+- variable: skip_next
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 769
+  type: assign
+  scope: glon.cli.main
+  context: 'True'
+- variable: args
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 770
+  type: assign
+  scope: glon.cli.main
+  context: parser.parse_args(ide_args)
+- variable: all_projects_with_time
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 775
+  type: assign
+  scope: glon.cli.main
+  context: get_all_projects_with_time()
+- variable: matching_projects_with_time
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 778
+  type: assign
+  scope: glon.cli.main
+  context: '[p for p in all_projects_with_time if project_name.lower() in p[''name''].lower()]'
+- variable: matching_projects
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 791
+  type: assign
+  scope: glon.cli.main
+  context: '[p[''name''] for p in matching_projects_with_time]'
+- variable: project_to_open
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 795
+  type: assign
+  scope: glon.cli.main
+  context: matching_projects[0]
+- variable: now
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 798
+  type: assign
+  scope: glon.cli.main
+  context: datetime.now()
+- variable: today
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 799
+  type: assign
+  scope: glon.cli.main
+  context: now.replace(hour=0, minute=0, second=0, microsecond=0)
+- variable: yesterday
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 800
+  type: assign
+  scope: glon.cli.main
+  context: today - timedelta(days=1)
+- variable: today_projects
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 803
+  type: assign
+  scope: glon.cli.main
+  context: '[p for p in matching_projects_with_time if p[''mtime''] >= today]'
+- variable: yesterday_projects
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 804
+  type: assign
+  scope: glon.cli.main
+  context: '[p for p in matching_projects_with_time if p[''mtime''] >= yesterday]'
+- variable: most_recent
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 808
+  type: assign
+  scope: glon.cli.main
+  context: 'max(today_projects, key=lambda x: x[''mtime''])'
+- variable: project_to_open
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 809
+  type: assign
+  scope: glon.cli.main
+  context: most_recent['name']
+- variable: mtime
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 816
+  type: assign
+  scope: glon.cli.main
+  context: p['mtime']
+- variable: age
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 817
+  type: assign
+  scope: glon.cli.main
+  context: now - mtime
+- variable: age_str
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 819
+  type: assign
+  scope: glon.cli.main
+  context: '''today'''
+- variable: age_str
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 821
+  type: assign
+  scope: glon.cli.main
+  context: '''yesterday'''
+- variable: age_str
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 823
+  type: assign
+  scope: glon.cli.main
+  context: f'{age.days} days ago'
+- variable: age_str
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 825
+  type: assign
+  scope: glon.cli.main
+  context: f'{age.days // 7} weeks ago'
+- variable: age_str
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 827
+  type: assign
+  scope: glon.cli.main
+  context: f'{age.days // 30} months ago'
+- variable: choice
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 832
   type: assign
   scope: glon.cli.main
   context: 'input(f''Select project (1-{len(matching_projects)}) or press Enter for
     first: '').strip()'
 - variable: idx
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 748
+  line: 834
   type: assign
   scope: glon.cli.main
   context: int(choice) - 1
 - variable: project_to_open
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 750
+  line: 836
   type: assign
   scope: glon.cli.main
   context: matching_projects[idx]
 - variable: project_to_open
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 753
+  line: 839
   type: assign
   scope: glon.cli.main
   context: matching_projects[0]
 - variable: project_to_open
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 755
+  line: 841
   type: assign
   scope: glon.cli.main
   context: matching_projects[0]
 - variable: project_to_open
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 757
+  line: 843
   type: assign
   scope: glon.cli.main
   context: matching_projects[0]
 - variable: project_to_open
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 760
+  line: 846
   type: assign
   scope: glon.cli.main
   context: matching_projects[0]
 - variable: parser
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 762
+  line: 848
   type: assign
   scope: glon.cli.main
   context: argparse.ArgumentParser(description='Open project in IDE', prog='glon open')
 - variable: project_arg
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 768
+  line: 854
   type: assign
   scope: glon.cli.main
   context: parser.add_argument('project', help='Project path (owner/repo or full path)')
 - variable: parser
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 768
+  line: 854
   type: method_call
   scope: glon.cli.main
   context: call to add_argument
 - variable: project_arg
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 775
+  line: 861
   type: assign
   scope: glon.cli.main
   context: ChoicesCompleter(all_projects)
 - variable: parser
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 777
+  line: 863
   type: method_call
   scope: glon.cli.main
   context: call to add_argument
 - variable: args
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 788
+  line: 874
   type: assign
   scope: glon.cli.main
   context: parser.parse_args(open_args)
 - variable: list_args
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 796
+  line: 882
   type: assign
   scope: glon.cli.main
   context: '[arg for arg in sys.argv[1:] if arg not in (''list'', ''ls'')]'
 - variable: parser
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 799
+  line: 885
   type: assign
   scope: glon.cli.main
   context: argparse.ArgumentParser(description='List all cloned projects', prog='glon
     list')
 - variable: parser
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 803
+  line: 889
   type: method_call
   scope: glon.cli.main
   context: call to add_argument
 - variable: parser
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 808
-  type: method_call
-  scope: glon.cli.main
-  context: call to add_argument
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 814
-  type: method_call
-  scope: glon.cli.main
-  context: call to add_argument
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 820
-  type: method_call
-  scope: glon.cli.main
-  context: call to add_argument
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 826
-  type: method_call
-  scope: glon.cli.main
-  context: call to add_argument
-- variable: args
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 832
-  type: assign
-  scope: glon.cli.main
-  context: parser.parse_args(list_args)
-- variable: time_filter
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 835
-  type: assign
-  scope: glon.cli.main
-  context: None
-- variable: time_filter
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 837
-  type: assign
-  scope: glon.cli.main
-  context: f'last {args.last}'
-- variable: time_filter
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 840
-  type: assign
-  scope: glon.cli.main
-  context: ''' ''.join(args.filter)'
-- variable: grab_args
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 853
-  type: assign
-  scope: glon.cli.main
-  context: '[arg for arg in sys.argv[1:] if arg != ''grab'']'
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 856
-  type: assign
-  scope: glon.cli.main
-  context: argparse.ArgumentParser(description='Grab path from clipboard and process
-    it', prog='glon grab')
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 860
-  type: method_call
-  scope: glon.cli.main
-  context: call to add_argument
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 865
-  type: method_call
-  scope: glon.cli.main
-  context: call to add_argument
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 870
-  type: method_call
-  scope: glon.cli.main
-  context: call to add_argument
-- variable: args
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 875
-  type: assign
-  scope: glon.cli.main
-  context: parser.parse_args(grab_args)
-- variable: success
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 877
-  type: assign
-  scope: glon.cli.main
-  context: grab_from_clipboard(base_path=args.base_path, dry_run=args.dry_run, verbose=args.verbose)
-- variable: use_clone_subcommand
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 885
-  type: assign
-  scope: glon.cli.main
-  context: len(sys.argv) > 1 and sys.argv[1] == 'clone'
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 888
-  type: assign
-  scope: glon.cli.main
-  context: argparse.ArgumentParser(description='Git Clone utility - Clone repositories
-    to organized directory structure', prog='glon')
-- variable: parser
-  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 893
+  line: 894
   type: method_call
   scope: glon.cli.main
   context: call to add_argument
@@ -8170,58 +8382,162 @@ mutations:
   line: 918
   type: assign
   scope: glon.cli.main
+  context: parser.parse_args(list_args)
+- variable: time_filter
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 921
+  type: assign
+  scope: glon.cli.main
+  context: None
+- variable: time_filter
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 923
+  type: assign
+  scope: glon.cli.main
+  context: f'last {args.last}'
+- variable: time_filter
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 926
+  type: assign
+  scope: glon.cli.main
+  context: ''' ''.join(args.filter)'
+- variable: grab_args
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 939
+  type: assign
+  scope: glon.cli.main
+  context: '[arg for arg in sys.argv[1:] if arg != ''grab'']'
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 942
+  type: assign
+  scope: glon.cli.main
+  context: argparse.ArgumentParser(description='Grab path from clipboard and process
+    it', prog='glon grab')
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 946
+  type: method_call
+  scope: glon.cli.main
+  context: call to add_argument
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 951
+  type: method_call
+  scope: glon.cli.main
+  context: call to add_argument
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 956
+  type: method_call
+  scope: glon.cli.main
+  context: call to add_argument
+- variable: args
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 961
+  type: assign
+  scope: glon.cli.main
+  context: parser.parse_args(grab_args)
+- variable: success
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 963
+  type: assign
+  scope: glon.cli.main
+  context: grab_from_clipboard(base_path=args.base_path, dry_run=args.dry_run, verbose=args.verbose)
+- variable: use_clone_subcommand
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 971
+  type: assign
+  scope: glon.cli.main
+  context: len(sys.argv) > 1 and sys.argv[1] == 'clone'
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 974
+  type: assign
+  scope: glon.cli.main
+  context: argparse.ArgumentParser(description='Git Clone utility - Clone repositories
+    to organized directory structure', prog='glon')
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 979
+  type: method_call
+  scope: glon.cli.main
+  context: call to add_argument
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 986
+  type: method_call
+  scope: glon.cli.main
+  context: call to add_argument
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 992
+  type: method_call
+  scope: glon.cli.main
+  context: call to add_argument
+- variable: parser
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 998
+  type: method_call
+  scope: glon.cli.main
+  context: call to add_argument
+- variable: args
+  file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
+  line: 1004
+  type: assign
+  scope: glon.cli.main
   context: parser.parse_args()
 - variable: args
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 924
+  line: 1010
   type: assign
   scope: glon.cli.main
   context: sys.argv[2]
 - variable: args
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 927
+  line: 1013
   type: assign
   scope: glon.cli.main
   context: _clipboard_url_candidate()
 - variable: parsed
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 936
+  line: 1022
   type: assign
   scope: glon.cli.main
   context: parse_git_url(args.url)
 - variable: owner
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 944
+  line: 1030
   type: assign
   scope: glon.cli.main
   context: parsed
 - variable: repo
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 944
+  line: 1030
   type: assign
   scope: glon.cli.main
   context: parsed
 - variable: owner
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 944
+  line: 1030
   type: assign
   scope: glon.cli.main
   context: parsed
 - variable: repo
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 944
+  line: 1030
   type: assign
   scope: glon.cli.main
   context: parsed
 - variable: target_dir
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 950
+  line: 1036
   type: assign
   scope: glon.cli.main
   context: create_directory_structure(owner, repo, args.base_path)
 - variable: success
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 960
+  line: 1046
   type: assign
   scope: glon.cli.main
   context: clone_repository(args.url, target_dir)

@@ -1,8 +1,8 @@
-# glon | 4f 1469L | python:4
+# glon | 4f 1555L | python:4
 # Keys: M=modules, D=details, i=imports, c=classes, f=functions, m=methods
 M[4]:
   glon/__init__.py,20
-  glon/cli.py,969
+  glon/cli.py,1055
   glon/core.py,218
   glon/utils.py,262
 D:

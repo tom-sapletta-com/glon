@@ -669,12 +669,70 @@ def main():
                         open_in_ide(str(project_path), args.ide)
                         return
             
-            # No valid clipboard content, show available projects
-            print("Available projects:")
-            for project in all_projects:
-                print(f"  {project}")
-            print("\nUsage: glon open <project>")
-            print("Example: glon open tom-sapletta-com/xeen")
+            # No valid clipboard content, show numbered list of recent projects
+            all_projects_with_time = get_all_projects_with_time()
+            if not all_projects_with_time:
+                print("No projects found.")
+                return
+            
+            # Show last 10 projects sorted by modification time
+            recent_projects = all_projects_with_time[:10]
+            print(f"\nRecent projects (last {len(recent_projects)}):")
+            print("-" * 50)
+            now = datetime.now()
+            today = now.replace(hour=0, minute=0, second=0, microsecond=0)
+            yesterday = today - timedelta(days=1)
+            
+            for i, p in enumerate(recent_projects, 1):
+                mtime = p["mtime"]
+                age = now - mtime
+                if mtime >= today:
+                    age_str = "today"
+                elif mtime >= yesterday:
+                    age_str = "yesterday"
+                elif age.days < 7:
+                    age_str = f"{age.days} days ago"
+                elif age.days < 30:
+                    age_str = f"{age.days // 7} weeks ago"
+                else:
+                    age_str = f"{age.days // 30} months ago"
+                print(f"  {i}. {p['name']} ({age_str})")
+            
+            print("-" * 50)
+            
+            try:
+                choice = input(f"Select project (1-{len(recent_projects)}) or press Enter to cancel: ").strip()
+                if not choice:
+                    print("Canceled.")
+                    return
+                
+                idx = int(choice) - 1
+                if 0 <= idx < len(recent_projects):
+                    project_to_open = recent_projects[idx]["name"]
+                    
+                    # Parse IDE arguments if any
+                    parser = argparse.ArgumentParser(
+                        description="Open project in IDE",
+                        prog="glon open"
+                    )
+                    parser.add_argument(
+                        "--ide",
+                        default=None,
+                        choices=["pycharm", "idea", "vscode", "code", "webstorm", "goland", "rider"],
+                        help="IDE to use (pycharm, idea, vscode, webstorm, goland, rider)"
+                    )
+                    
+                    # Filter IDE args from open_args
+                    ide_args = [arg for arg in open_args if arg.startswith("--")]
+                    args = parser.parse_args(ide_args)
+                    
+                    open_in_ide(project_to_open, args.ide)
+                else:
+                    print(f"Invalid selection: {choice}")
+            except ValueError:
+                print(f"Invalid input: {choice}")
+            except EOFError:
+                print("No input received.")
             return
         
         # Get the project name (first non-flag argument)

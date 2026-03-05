@@ -3,23 +3,23 @@ project:
   name: glon
   repo: /home/tom/github/tom-sapletta-com/glon
   language: python
-  analyzed_at: '2026-03-05T11:59:40Z'
+  analyzed_at: '2026-03-05T12:01:10Z'
   tool: code2llm
   stats:
     files: 3
-    lines: 2244
+    lines: 2330
     functions: 41
     classes: 2
 health:
-  cc_avg: 5.3
-  critical_count: 3
+  cc_avg: 5.7
+  critical_count: 4
   critical_limit: 10
   duplicates: 0
   cycles: 0
   alerts:
   - type: cc_exceeded
     target: main
-    value: 68
+    value: 79
     limit: 15
     severity: critical
   - type: high_fan_out
@@ -43,6 +43,11 @@ health:
     limit: 10
     severity: error
   - type: high_fan_out
+    target: open_in_ide
+    value: 19
+    limit: 10
+    severity: error
+  - type: high_fan_out
     target: grab_from_clipboard
     value: 18
     limit: 10
@@ -52,10 +57,10 @@ health:
     value: 16
     limit: 10
     severity: error
-  - type: high_fan_out
+  - type: cc_exceeded
     target: open_in_ide
-    value: 14
-    limit: 10
+    value: 15
+    limit: 15
     severity: warning
   - type: high_fan_out
     target: monitor_memory_usage
@@ -74,10 +79,10 @@ health:
     severity: warning
 modules:
 - path: glon/cli.py
-  lines: 969
+  lines: 1055
   classes: 0
   methods: 13
-  cc_max: 68
+  cc_max: 79
   inbound_deps: 0
   exports:
   - name: get_all_projects
@@ -111,11 +116,12 @@ modules:
     fan_out: 19
   - name: open_in_ide
     type: function
-    cc: 9
-    fan_out: 14
+    cc: 15
+    flag: split
+    fan_out: 19
   - name: main
     type: function
-    cc: 68
+    cc: 79
     flag: split
     fan_out: 41
 - path: glon/utils.py
@@ -182,6 +188,10 @@ hotspots:
   fan_out: 19
   note: "List all projects in the base path.\n\nArgs:\n    base_path: Base path to\
     \ search (d"
+- name: open_in_ide
+  fan_out: 19
+  note: "Open a project in an IDE.\n\nArgs:\n    project_path: Path to project (e.g.,\
+    \ \"owner"
 - name: grab_from_clipboard
   fan_out: 18
   note: 'Grab path from clipboard and process it.
@@ -191,10 +201,6 @@ hotspots:
 - name: analyze_memory_usage
   fan_out: 16
   note: Analysis pipeline, 16 stages
-- name: open_in_ide
-  fan_out: 14
-  note: "Open a project in an IDE.\n\nArgs:\n    project_path: Path to project (e.g.,\
-    \ \"owner"
 - name: monitor_memory_usage
   fan_out: 11
   note: "Monitor memory usage over time.\n\nArgs:\n    duration: Monitoring duration\
@@ -209,11 +215,11 @@ hotspots:
     \ to anal"
 refactoring:
   priorities:
-  - action: Split main (CC=68 → target CC<10)
+  - action: Split main (CC=79 → target CC<10)
     impact: high
     effort: low
     module: cli.py
-  - action: Split god module glon/cli.py (969L, 0 classes)
+  - action: Split god module glon/cli.py (1055L, 0 classes)
     impact: high
     effort: high
   - action: Split grab_from_clipboard (CC=20 → target CC<10)
@@ -224,18 +230,22 @@ refactoring:
     impact: medium
     effort: low
     module: cli.py
+  - action: Split open_in_ide (CC=15 → target CC<10)
+    impact: medium
+    effort: low
+    module: cli.py
   - action: Reduce main fan-out (currently 41)
     impact: medium
     effort: medium
   - action: Reduce list_projects fan-out (currently 19)
     impact: medium
     effort: medium
-  - action: Reduce grab_from_clipboard fan-out (currently 18)
+  - action: Reduce open_in_ide fan-out (currently 19)
     impact: medium
     effort: medium
 evolution:
 - date: '2026-03-05'
-  cc_avg: 5.3
-  critical: 3
-  lines: 2244
+  cc_avg: 5.7
+  critical: 4
+  lines: 2330
   note: Automated analysis

@@ -509,13 +509,13 @@ def list_projects(base_path: Optional[str] = None, time_filter: Optional[str] = 
     return True
 
 
-def open_in_ide(project_path: str, ide: str = "pycharm") -> bool:
+def open_in_ide(project_path: str, ide: Optional[str] = None) -> bool:
     """
     Open a project in an IDE.
     
     Args:
         project_path: Path to project (e.g., "owner/repo" or full path)
-        ide: IDE to use (default: pycharm)
+        ide: IDE to use (if None, will prompt user to select)
         
     Returns:
         True if successful, False otherwise
@@ -547,7 +547,7 @@ def open_in_ide(project_path: str, ide: str = "pycharm") -> bool:
         print(f"Error: Project path is not a directory: {full_path}")
         return False
     
-    # Try to open in the IDE
+    # Define available IDEs with their commands
     ide_commands = {
         "pycharm": ["pycharm", str(full_path)],
         "idea": ["idea", str(full_path)],
@@ -557,6 +557,34 @@ def open_in_ide(project_path: str, ide: str = "pycharm") -> bool:
         "goland": ["goland", str(full_path)],
         "rider": ["rider", str(full_path)],
     }
+    
+    # If IDE not specified, prompt user to select
+    if ide is None:
+        print(f"\nSelect IDE to open {full_path}:")
+        print("-" * 40)
+        available_ides = list(ide_commands.keys())
+        for i, ide_name in enumerate(available_ides, 1):
+            print(f"  {i}. {ide_name}")
+        print("-" * 40)
+        
+        try:
+            choice = input(f"Select IDE (1-{len(available_ides)}): ").strip()
+            if not choice:
+                print("No IDE selected. Canceling.")
+                return False
+            
+            idx = int(choice) - 1
+            if 0 <= idx < len(available_ides):
+                ide = available_ides[idx]
+            else:
+                print(f"Invalid selection: {choice}")
+                return False
+        except ValueError:
+            print(f"Invalid input: {choice}")
+            return False
+        except EOFError:
+            print("No input received. Canceling.")
+            return False
     
     cmd = ide_commands.get(ide.lower())
     if cmd is None:
@@ -629,7 +657,7 @@ def main():
                         )
                         parser.add_argument(
                             "--ide",
-                            default="pycharm",
+                            default=None,
                             choices=["pycharm", "idea", "vscode", "code", "webstorm", "goland", "rider"],
                             help="IDE to use (pycharm, idea, vscode, webstorm, goland, rider)"
                         )
@@ -664,7 +692,7 @@ def main():
                 )
                 parser.add_argument(
                     "--ide",
-                    default="pycharm",
+                    default=None,
                     choices=["pycharm", "idea", "vscode", "code", "webstorm", "goland", "rider"],
                     help="IDE to use"
                 )
@@ -776,7 +804,7 @@ def main():
         
         parser.add_argument(
             "--ide",
-            default="pycharm",
+            default=None,
             choices=["pycharm", "idea", "vscode", "code", "webstorm", "goland", "rider"],
             help="IDE to use (pycharm, idea, vscode, webstorm, goland, rider)"
         )

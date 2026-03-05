@@ -7,7 +7,7 @@ stats:
   nodes_created: 342
   edges_created: 431
   patterns_detected: 0
-  analysis_time_seconds: 0.44
+  analysis_time_seconds: 0.39
   cache_hits: 0
 nodes:
   glon.utils.cleanup_temp_files_entry:
@@ -3186,6 +3186,10 @@ edges:
   target: glon.cli.main_exit
   edge_type: control
 modules:
+  glon:
+    name: glon
+    file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
+    is_package: true
   glon.utils:
     name: glon.utils
     file: /home/tom/github/tom-sapletta-com/glon/glon/utils.py
@@ -3200,10 +3204,6 @@ modules:
     - glon.utils.set_debug_gc
     - glon.utils.clear_gc_debug
     - glon.utils.create_memory_logger
-  glon:
-    name: glon
-    file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
-    is_package: true
   glon.core:
     name: glon.core
     file: /home/tom/github/tom-sapletta-com/glon/glon/core.py
@@ -5082,6 +5082,14 @@ entry_points:
 - glon.core.MemoryProfiler.clear_tracking
 - glon.cli.main
 data_flows:
+  glon.__version__:
+    variable: __version__
+  glon.__author__:
+    variable: __author__
+  glon.__email__:
+    variable: __email__
+  glon.__all__:
+    variable: __all__
   glon.utils.psutil:
     variable: psutil
   glon.utils.cleanup_temp_files.temp_dir:
@@ -5095,8 +5103,8 @@ data_flows:
   glon.utils.cleanup_temp_files.filename:
     variable: filename
     dependencies:
-    - temp_dir
     - os
+    - temp_dir
   os.listdir.arg0:
     variable: os.listdir.arg0
     dependencies:
@@ -5104,9 +5112,9 @@ data_flows:
   glon.utils.cleanup_temp_files.file_path:
     variable: file_path
     dependencies:
+    - os
     - filename
     - temp_dir
-    - os
   os.path.join.arg0:
     variable: os.path.join.arg0
     dependencies:
@@ -5144,21 +5152,21 @@ data_flows:
   glon.utils.monitor_memory_usage.sample:
     variable: sample
     dependencies:
-    - process
-    - memory_info
-    - time
-    - len
     - gc
+    - memory_info
+    - len
+    - time
+    - process
   len.arg0:
     variable: len.arg0
     dependencies:
-    - yesterday_projects
-    - sys
     - parts
     - open_args
     - text
-    - matching_projects
+    - sys
     - projects
+    - matching_projects
+    - yesterday_projects
   samples.append.arg0:
     variable: samples.append.arg0
     dependencies:
@@ -5170,16 +5178,16 @@ data_flows:
   glon.utils.force_garbage_collection.results:
     variable: results
     dependencies:
-    - before_count
     - collected
     - after_count
+    - before_count
   glon.utils.force_garbage_collection.generation:
     variable: generation
     dependencies:
-    - before_count
     - collected
     - after_count
     - range
+    - before_count
   glon.utils.force_garbage_collection.before_count:
     variable: before_count
     dependencies:
@@ -5202,36 +5210,36 @@ data_flows:
   print.arg0:
     variable: print.arg0
     dependencies:
-    - p
-    - ide
+    - repo
+    - git_marker
+    - i
+    - owner
     - is_git
-    - len
+    - age_str
+    - source_path
+    - e
+    - clipboard_text
     - target_dir
+    - time_filter
     - ide_commands
+    - project
+    - path
+    - len
+    - projects
+    - url
+    - project_path
+    - base_path
     - total_count
+    - date_str
+    - link_path
+    - args
+    - git_url
+    - ide
     - dir_name
     - full_path
-    - args
-    - project
-    - base_path
-    - date_str
-    - path
-    - source_path
-    - clipboard_text
-    - i
-    - project_to_open
-    - url
-    - e
-    - project_path
-    - repo
-    - link_path
-    - time_filter
-    - git_marker
-    - git_url
     - project_name
-    - owner
-    - age_str
-    - projects
+    - p
+    - project_to_open
   glon.utils.find_object_cycles.cycles:
     variable: cycles
   glon.utils.find_object_cycles.visited:
@@ -5243,8 +5251,8 @@ data_flows:
   glon.utils._find_cycles.obj_id:
     variable: obj_id
     dependencies:
-    - id
     - current_obj
+    - id
   id.arg0:
     variable: id.arg0
     dependencies:
@@ -5262,8 +5270,8 @@ data_flows:
     variable: cycles.append.arg0
     dependencies:
     - path
-    - cycle_start
     - current_obj
+    - cycle_start
   visited.add.arg0:
     variable: visited.add.arg0
     dependencies:
@@ -5288,8 +5296,8 @@ data_flows:
   _find_cycles.arg0:
     variable: _find_cycles.arg0
     dependencies:
-    - ref
     - obj
+    - ref
   _find_cycles.arg1:
     variable: _find_cycles.arg1
     dependencies:
@@ -5317,8 +5325,8 @@ data_flows:
   glon.utils.analyze_memory_usage.type_counts:
     variable: type_counts
     dependencies:
-    - obj_type
     - type_counts
+    - obj_type
   glon.utils.analyze_memory_usage.obj:
     variable: obj
     dependencies:
@@ -5327,9 +5335,9 @@ data_flows:
     variable: obj_type
     dependencies:
     - type_counts
-    - type
     - obj_type
     - obj
+    - type
   type.arg0:
     variable: type.arg0
     dependencies:
@@ -5341,15 +5349,15 @@ data_flows:
   glon.utils.analyze_memory_usage.sorted_types:
     variable: sorted_types
     dependencies:
+    - type_counts
     - sorted
     - x
-    - type_counts
   sorted.arg0:
     variable: sorted.arg0
     dependencies:
-    - projects_with_time
-    - p
     - projects
+    - p
+    - projects_with_time
   gc.set_debug.arg0:
     variable: gc.set_debug.arg0
     dependencies:
@@ -5365,8 +5373,8 @@ data_flows:
   glon.utils.create_memory_logger.handler:
     variable: handler
     dependencies:
-    - logging
     - log_file
+    - logging
   logging.FileHandler.arg0:
     variable: logging.FileHandler.arg0
     dependencies:
@@ -5387,14 +5395,6 @@ data_flows:
     variable: logger.addHandler.arg0
     dependencies:
     - handler
-  glon.__version__:
-    variable: __version__
-  glon.__author__:
-    variable: __author__
-  glon.__email__:
-    variable: __email__
-  glon.__all__:
-    variable: __all__
   glon.core.__init__.self:
     variable: self
     dependencies:
@@ -5428,8 +5428,8 @@ data_flows:
   glon.core.take_snapshot.process:
     variable: process
     dependencies:
-    - psutil
     - os
+    - psutil
   glon.core.take_snapshot.memory_info:
     variable: memory_info
     dependencies:
@@ -5437,11 +5437,11 @@ data_flows:
   glon.core.take_snapshot.snapshot:
     variable: snapshot
     dependencies:
-    - memory_info
-    - label
-    - time
-    - len
     - gc
+    - memory_info
+    - len
+    - time
+    - label
   self.snapshots.append.arg0:
     variable: self.snapshots.append.arg0
     dependencies:
@@ -5449,25 +5449,25 @@ data_flows:
   glon.core.track_object.obj_id:
     variable: obj_id
     dependencies:
+    - obj
     - str
-    - type
-    - label
-    - time
     - ref
     - ref_type
+    - time
+    - type
+    - label
     - id
-    - obj
   str.arg0:
     variable: str.arg0
     dependencies:
     - full_path
-    - project_path
     - target_dir
+    - project_path
   glon.core.track_object.ref:
     variable: ref
     dependencies:
-    - weakref
     - obj
+    - weakref
   weakref.ref.arg0:
     variable: weakref.ref.arg0
     dependencies:
@@ -5477,12 +5477,12 @@ data_flows:
   glon.core.track_object.self:
     variable: self
     dependencies:
-    - type
-    - label
-    - time
+    - obj
     - ref
     - ref_type
-    - obj
+    - time
+    - type
+    - label
   glon.core.get_tracked_objects.alive:
     variable: alive
     dependencies:
@@ -5536,12 +5536,12 @@ data_flows:
   Path.arg0:
     variable: Path.arg0
     dependencies:
-    - clipboard_text
-    - full_path
-    - project_path
-    - project_name
     - base_path
+    - full_path
+    - project_name
     - os
+    - project_path
+    - clipboard_text
   glon.cli.get_all_projects_with_time.projects:
     variable: projects
   glon.cli.get_all_projects_with_time.owner_dir:
@@ -5564,8 +5564,8 @@ data_flows:
   projects.append.arg0:
     variable: projects.append.arg0
     dependencies:
-    - mtime
     - owner_dir
+    - mtime
     - repo_dir
   glon.cli._read_clipboard_text.root:
     variable: root
@@ -5581,15 +5581,15 @@ data_flows:
   glon.cli._read_clipboard_text.result:
     variable: result
     dependencies:
-    - cmd
     - subprocess
+    - cmd
   subprocess.run.arg0:
     variable: subprocess.run.arg0
     dependencies:
-    - cmd
     - url
-    - target_dir
     - str
+    - cmd
+    - target_dir
   glon.cli._extract_git_url_from_text.lines:
     variable: lines
     dependencies:
@@ -5602,10 +5602,10 @@ data_flows:
   parse_git_url.arg0:
     variable: parse_git_url.arg0
     dependencies:
-    - clipboard_text
-    - git_url
-    - args
     - text
+    - args
+    - git_url
+    - clipboard_text
     - line
   glon.cli._extract_git_url_from_text.ssh_pattern:
     variable: ssh_pattern
@@ -5618,8 +5618,8 @@ data_flows:
   re.search.arg0:
     variable: re.search.arg0
     dependencies:
-    - https_pattern
     - ssh_pattern
+    - https_pattern
     - https_pattern_no_git
   re.search.arg1:
     variable: re.search.arg1
@@ -5630,16 +5630,16 @@ data_flows:
   glon.cli._extract_git_url_from_text.https_match:
     variable: https_match
     dependencies:
-    - https_pattern
     - re
+    - https_pattern
     - line
   glon.cli._extract_git_url_from_text.https_pattern_no_git:
     variable: https_pattern_no_git
   glon.cli._extract_git_url_from_text.https_match_no_git:
     variable: https_match_no_git
     dependencies:
-    - https_pattern_no_git
     - re
+    - https_pattern_no_git
     - line
   glon.cli._clipboard_url_candidate.text:
     variable: text
@@ -5649,22 +5649,22 @@ data_flows:
   any.arg0:
     variable: any.arg0
     dependencies:
-    - ch
-    - target_dir
     - text
+    - target_dir
+    - ch
   glon.cli.parse_git_url.ssh_pattern:
     variable: ssh_pattern
   glon.cli.parse_git_url.ssh_match:
     variable: ssh_match
     dependencies:
     - re
-    - url
     - ssh_pattern
+    - url
   re.match.arg0:
     variable: re.match.arg0
     dependencies:
-    - https_pattern
     - ssh_pattern
+    - https_pattern
     - https_pattern_no_git
   re.match.arg1:
     variable: re.match.arg1
@@ -5675,16 +5675,16 @@ data_flows:
   glon.cli.parse_git_url.https_match:
     variable: https_match
     dependencies:
-    - https_pattern
     - re
+    - https_pattern
     - url
   glon.cli.parse_git_url.https_pattern_no_git:
     variable: https_pattern_no_git
   glon.cli.parse_git_url.https_match_no_git:
     variable: https_match_no_git
     dependencies:
-    - https_pattern_no_git
     - re
+    - https_pattern_no_git
     - url
   glon.cli.create_directory_structure.base_path:
     variable: base_path
@@ -5693,17 +5693,17 @@ data_flows:
   glon.cli.create_directory_structure.target_dir:
     variable: target_dir
     dependencies:
-    - repo
+    - owner
     - base_path
     - Path
-    - owner
+    - repo
   glon.cli.clone_repository.result:
     variable: result
     dependencies:
-    - url
     - subprocess
-    - target_dir
+    - url
     - str
+    - target_dir
   glon.cli.grab_from_clipboard.clipboard_text:
     variable: clipboard_text
     dependencies:
@@ -5725,12 +5725,12 @@ data_flows:
   glon.cli.grab_from_clipboard.target_dir:
     variable: target_dir
     dependencies:
-    - dir_name
-    - repo
-    - create_directory_structure
     - base_path
-    - Path
+    - repo
+    - dir_name
     - owner
+    - create_directory_structure
+    - Path
   create_directory_structure.arg0:
     variable: create_directory_structure.arg0
     dependencies:
@@ -5742,20 +5742,20 @@ data_flows:
   create_directory_structure.arg2:
     variable: create_directory_structure.arg2
     dependencies:
-    - args
     - base_path
+    - args
   glon.cli.grab_from_clipboard.success:
     variable: success
     dependencies:
-    - clone_repository
     - clipboard_text
+    - clone_repository
     - target_dir
   clone_repository.arg0:
     variable: clone_repository.arg0
     dependencies:
+    - clipboard_text
     - args
     - git_url
-    - clipboard_text
   clone_repository.arg1:
     variable: clone_repository.arg1
     dependencies:
@@ -5776,8 +5776,8 @@ data_flows:
   glon.cli.grab_from_clipboard.link_path:
     variable: link_path
     dependencies:
-    - source_path
     - target_dir
+    - source_path
   link_path.symlink_to.arg0:
     variable: link_path.symlink_to.arg0
     dependencies:
@@ -5789,8 +5789,8 @@ data_flows:
   shutil.copy2.arg1:
     variable: shutil.copy2.arg1
     dependencies:
-    - source_path
     - target_dir
+    - source_path
   glon.cli.parse_time_filter.filter_str:
     variable: filter_str
     dependencies:
@@ -5811,10 +5811,10 @@ data_flows:
   glon.cli.list_projects.filter_date:
     variable: filter_date
     dependencies:
-    - days
-    - timedelta
     - datetime
+    - days
     - parse_time_filter
+    - timedelta
     - time_filter
   parse_time_filter.arg0:
     variable: parse_time_filter.arg0
@@ -5823,24 +5823,24 @@ data_flows:
   glon.cli.list_projects.days:
     variable: days
     dependencies:
-    - time_filter
     - int
+    - time_filter
   int.arg0:
     variable: int.arg0
     dependencies:
-    - time_filter
     - choice
+    - time_filter
   glon.cli.list_projects.now:
     variable: now
     dependencies:
-    - datetime
     - days
+    - datetime
     - timedelta
   glon.cli.list_projects.projects:
     variable: projects
     dependencies:
-    - limit
     - projects
+    - limit
   glon.cli.list_projects.owner_dir:
     variable: owner_dir
     dependencies:
@@ -5912,13 +5912,13 @@ data_flows:
   glon.cli.open_in_ide.full_path:
     variable: full_path
     dependencies:
-    - full_path
-    - project_path
-    - repo
     - base_path
-    - Path
+    - repo
+    - full_path
     - owner
     - os
+    - project_path
+    - Path
   os.path.expanduser.arg0:
     variable: os.path.expanduser.arg0
     dependencies:
@@ -5931,8 +5931,8 @@ data_flows:
   glon.cli.open_in_ide.cmd:
     variable: cmd
     dependencies:
-    - ide_commands
     - ide
+    - ide_commands
   ide_commands.get.arg0:
     variable: ide_commands.get.arg0
     dependencies:
@@ -5984,9 +5984,9 @@ data_flows:
   glon.cli.main.project_name:
     variable: project_name
     dependencies:
-    - repo
-    - open_args
     - owner
+    - open_args
+    - repo
   glon.cli.main.base_path:
     variable: base_path
     dependencies:
@@ -5994,26 +5994,26 @@ data_flows:
   glon.cli.main.project_path:
     variable: project_path
     dependencies:
-    - repo
     - base_path
+    - repo
+    - owner
     - target_dir
     - Path
-    - owner
   glon.cli.main.target_dir:
     variable: target_dir
     dependencies:
-    - args
     - repo
-    - create_directory_structure
     - owner
+    - args
+    - create_directory_structure
   glon.cli.main.success:
     variable: success
     dependencies:
-    - clone_repository
-    - git_url
-    - args
-    - target_dir
     - grab_from_clipboard
+    - args
+    - git_url
+    - clone_repository
+    - target_dir
   glon.cli.main.project:
     variable: project
     dependencies:
@@ -6030,27 +6030,27 @@ data_flows:
   glon.cli.main.args:
     variable: args
     dependencies:
-    - sys
-    - parser
+    - open_args
     - list_args
     - grab_args
-    - open_args
-    - ide_args
+    - sys
     - _clipboard_url_candidate
+    - parser
+    - ide_args
   parser.parse_args.arg0:
     variable: parser.parse_args.arg0
     dependencies:
-    - ide_args
+    - open_args
     - list_args
     - grab_args
-    - open_args
+    - ide_args
   open_in_ide.arg0:
     variable: open_in_ide.arg0
     dependencies:
-    - project_to_open
-    - project_path
     - full_path
+    - project_to_open
     - str
+    - project_path
   open_in_ide.arg1:
     variable: open_in_ide.arg1
     dependencies:
@@ -6065,8 +6065,8 @@ data_flows:
   enumerate.arg0:
     variable: enumerate.arg0
     dependencies:
-    - matching_projects_with_time
     - open_args
+    - matching_projects_with_time
   ide_args.append.arg0:
     variable: ide_args.append.arg0
     dependencies:
@@ -6086,14 +6086,14 @@ data_flows:
   glon.cli.main.matching_projects:
     variable: matching_projects
     dependencies:
-    - matching_projects_with_time
     - p
+    - matching_projects_with_time
   glon.cli.main.project_to_open:
     variable: project_to_open
     dependencies:
+    - matching_projects
     - most_recent
     - idx
-    - matching_projects
   glon.cli.main.now:
     variable: now
     dependencies:
@@ -6111,14 +6111,14 @@ data_flows:
     variable: today_projects
     dependencies:
     - today
-    - matching_projects_with_time
     - p
+    - matching_projects_with_time
   glon.cli.main.yesterday_projects:
     variable: yesterday_projects
     dependencies:
-    - matching_projects_with_time
-    - p
     - yesterday
+    - p
+    - matching_projects_with_time
   glon.cli.main.most_recent:
     variable: most_recent
     dependencies:
@@ -6136,8 +6136,8 @@ data_flows:
   glon.cli.main.age:
     variable: age
     dependencies:
-    - now
     - mtime
+    - now
   glon.cli.main.age_str:
     variable: age_str
     dependencies:
@@ -6145,8 +6145,8 @@ data_flows:
   glon.cli.main.choice:
     variable: choice
     dependencies:
-    - input
     - matching_projects
+    - input
     - len
   input.arg0:
     variable: input.arg0
@@ -6156,14 +6156,14 @@ data_flows:
   glon.cli.main.idx:
     variable: idx
     dependencies:
-    - int
     - choice
+    - int
   glon.cli.main.project_arg:
     variable: project_arg
     dependencies:
-    - ChoicesCompleter
     - all_projects
     - parser
+    - ChoicesCompleter
   ChoicesCompleter.arg0:
     variable: ChoicesCompleter.arg0
     dependencies:
@@ -6550,111 +6550,135 @@ smells:
 - name: 'Shotgun Surgery: base_path'
   type: shotgun_surgery
   file: /home/tom/github/tom-sapletta-com/glon/glon/cli.py
-  line: 200
+  line: 579
   severity: 0.8
   description: Mutation of variable 'base_path' spans 6 functions. Changing this logic
     requires work in many places.
   context:
     variable: base_path
     affected_functions:
-    - glon.cli.create_directory_structure
-    - glon.cli.grab_from_clipboard
-    - glon.cli.list_projects
     - glon.cli.main
+    - glon.cli.create_directory_structure
     - glon.cli.open_in_ide
+    - glon.cli.grab_from_clipboard
     - glon.cli.get_all_projects_with_time
+    - glon.cli.list_projects
 coupling:
   module_interactions:
     glon.utils:
-    - handler
-    - type
-    - ImportError
-    - _find_cycles
-    - len
     - visited
-    - time
-    - type_counts
-    - sorted
-    - logger
-    - set
+    - process
     - logging
     - gc
-    - os
-    - sys
+    - sorted
     - path
-    - samples
-    - print
-    - cycles
-    - tempfile
-    - process
-    - range
+    - type_counts
+    - len
+    - set
     - psutil
+    - samples
+    - _find_cycles
+    - ImportError
+    - tempfile
+    - os
+    - print
+    - handler
+    - logger
+    - range
+    - sys
+    - cycles
+    - time
+    - type
     - id
     glon.core:
-    - snap1
-    - info
-    - process
-    - os
-    - str
-    - snap2
-    - IndexError
-    - type
-    - time
-    - len
-    - psutil
-    - weakref
     - gc
-    - id
     - self
-    glon.cli:
-    - ide
-    - enumerate
-    - any
-    - filter_str
+    - snap2
+    - psutil
+    - str
+    - snap1
+    - weakref
     - len
-    - ChoicesCompleter
-    - https_match_no_git
-    - owner_dir
-    - ssh_match
-    - repo_dir
-    - target_dir
-    - ide_commands
-    - re
-    - parser
-    - https_match
-    - glon
-    - full_path
-    - sorted
-    - subprocess
-    - tkinter
     - os
-    - argcomplete
+    - time
+    - type
+    - process
+    - IndexError
+    - info
+    - id
+    glon.cli:
+    - datetime
+    - ssh_match
+    - str
+    - argparse
+    - subprocess
+    - any
+    - https_match
     - source_path
     - clipboard_text
-    - argparse
-    - project_path
-    - datetime
-    - print
-    - input
-    - None
-    - link_path
-    - arg
-    - ide_args
+    - target_dir
+    - ide_commands
     - now
-    - timedelta
-    - str
-    - shutil
+    - input
+    - glon
+    - sorted
     - int
-    - max
-    - project_name
-    - mtime
-    - Path
     - text
-    - root
-    - base_path_obj
-    - line
+    - len
     - projects
+    - re
+    - ChoicesCompleter
+    - project_path
+    - owner_dir
+    - enumerate
+    - mtime
+    - timedelta
+    - ide_args
+    - tkinter
+    - root
+    - arg
+    - os
+    - link_path
+    - print
+    - ide
+    - line
+    - Path
+    - max
+    - full_path
+    - project_name
+    - argcomplete
+    - base_path_obj
+    - shutil
+    - repo_dir
+    - None
+    - parser
+    - filter_str
+    - https_match_no_git
 mutations:
+- variable: __version__
+  file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
+  line: 8
+  type: assign
+  scope: glon
+  context: '''0.1.23'''
+- variable: __author__
+  file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
+  line: 9
+  type: assign
+  scope: glon
+  context: '''Tom Sapletta'''
+- variable: __email__
+  file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
+  line: 10
+  type: assign
+  scope: glon
+  context: '''tom@sapleta.com'''
+- variable: __all__
+  file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
+  line: 15
+  type: assign
+  scope: glon
+  context: '[''GarbageCollector'', ''MemoryProfiler'', ''cleanup_temp_files'', ''monitor_memory_usage'']'
 - variable: psutil
   file: /home/tom/github/tom-sapletta-com/glon/glon/utils.py
   line: 17
@@ -6935,30 +6959,6 @@ mutations:
   type: method_call
   scope: glon.utils.create_memory_logger
   context: call to addHandler
-- variable: __version__
-  file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
-  line: 8
-  type: assign
-  scope: glon
-  context: '''0.1.22'''
-- variable: __author__
-  file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
-  line: 9
-  type: assign
-  scope: glon
-  context: '''Tom Sapletta'''
-- variable: __email__
-  file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
-  line: 10
-  type: assign
-  scope: glon
-  context: '''tom@sapleta.com'''
-- variable: __all__
-  file: /home/tom/github/tom-sapletta-com/glon/glon/__init__.py
-  line: 15
-  type: assign
-  scope: glon
-  context: '[''GarbageCollector'', ''MemoryProfiler'', ''cleanup_temp_files'', ''monitor_memory_usage'']'
 - variable: self
   file: /home/tom/github/tom-sapletta-com/glon/glon/core.py
   line: 16

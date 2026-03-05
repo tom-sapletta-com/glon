@@ -1,5 +1,15 @@
 ## [Unreleased]
 
+## [0.1.26] - 2026-03-05
+
+### Docs
+- Update project/README.md
+
+### Other
+- Update project/analysis.json
+- Update project/analysis.yaml
+- Update project/project.toon
+
 ## [0.1.25] - 2026-03-05
 
 ### Docs
